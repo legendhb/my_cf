@@ -1,0 +1,371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>图片列表</title>
+<link href="http://ue.17173cdn.com/cache/lib/v2/reset-and-utils-1.0.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<!--[if IE 6]>
+	<script type="text/javascript" src="js/ddpng-0.0.8a.min.js"></script>
+	<script type="text/javascript src="js/ie6.js"></script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="wrapper">
+		<!--#include virtual="inc/inc-header.shtml"-->
+		<div class="content content-ex">
+			<div class="subpage subpage-video-list">
+				<div class="comm-pn2 comm-pn2-ex">
+					<div class="comm-pn2-hd">
+						<i class="ico-adorn"></i>
+						<h2 class="tit">热门图片</h2>
+						<span class="more"><a href="#" target="_blank">更多<i class="ico-plus"></i></a></span>
+					</div>
+					<div class="comm-pn2-bd">
+						<ul class="gb-list2 comm-plist col4">
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="comm-pn2 comm-pn2-ex">
+					<div class="comm-pn2-hd">
+						<i class="ico-adorn"></i>
+						<h2 class="tit">高手图片</h2>
+						<span class="more"><a href="#" target="_blank">更多<i class="ico-plus"></i></a></span>
+					</div>
+					<div class="comm-pn2-bd">
+						<ul class="gb-list2 comm-plist col4">
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="comm-pn2 comm-pn2-ex">
+					<div class="comm-pn2-hd">
+						<i class="ico-adorn"></i>
+						<h2 class="tit">教学图片</h2>
+						<span class="more"><a href="#" target="_blank">更多<i class="ico-plus"></i></a></span>
+					</div>
+					<div class="comm-pn2-bd">
+						<ul class="gb-list2 comm-plist col4">
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="comm-pn2 comm-pn2-ex">
+					<div class="comm-pn2-hd">
+						<i class="ico-adorn"></i>
+						<h2 class="tit">官方图片</h2>
+						<span class="more"><a href="#" target="_blank">更多<i class="ico-plus"></i></a></span>
+					</div>
+					<div class="comm-pn2-bd">
+						<ul class="gb-list2 comm-plist col4">
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="comm-pn2 comm-pn2-ex">
+					<div class="comm-pn2-hd">
+						<i class="ico-adorn"></i>
+						<h2 class="tit">赛事图片</h2>
+						<span class="more"><a href="#" target="_blank">更多<i class="ico-plus"></i></a></span>
+					</div>
+					<div class="comm-pn2-bd">
+						<ul class="gb-list2 comm-plist col4">
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+							<li class="gb-list2-item">
+								<a href="#" class="gb-list2-con" target="_blank">
+									<span class="gb-list2-c1">
+										<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+
+									</span>
+									<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div><!--end the content-->
+		<!--#include virtual="inc/inc-footer.shtml"-->
+	</div><!--end the wrapper-->	
+<script type="text/javascript" src="js/design.js"></script>
+</body>
+</html>

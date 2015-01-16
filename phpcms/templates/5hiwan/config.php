@@ -1,8 +1,8 @@
 <?php return array (
-  'name' => '默认模板',
-  'author' => 'PHPCMS TEAM',
-  'dirname' => 'default',
-  'homepage' => 'http://www.phpcms.cn/',
+  'name' => '5hiwan模版',
+  'author' => 'legendhb@gmail.com',
+  'dirname' => '5hiwan',
+  'homepage' => 'http://www.5hiwan.com/',
   'version' => '1.0',
   'disable' => 0,
   'file_explan' => 

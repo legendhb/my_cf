@@ -43,7 +43,7 @@ Temporary Items
 .apdisk
 
 uploadfile/
-caches/
 html/
 index.html
 js.html
+/.idea

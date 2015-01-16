@@ -1,0 +1,42 @@
+<div class="header">
+	<a href="#" target="_blank" class="logo-5hiwan"><img src="img/logo-5hiwan.png" alt="" width="131" height="78" class="png" /></a>
+	<a href="#" target="_blank" class="logo-cf">
+		<span class="avatar"><img src="img/logo-cf.png" alt="" width="425" height="100" class="png" /></span>
+		<span class="tit">www.5hiwan.com</span>
+	</a>
+	<div class="box-weixin">
+		<div class="box-weixin-c1"><h3 class="tit">关注微信<br/>有豪礼！</h3></div>
+		<div class="box-weixin-c2"><img src="img/code-87-87.jpg" alt="" width="87" height="87" /></div>
+	</div>
+	<div class="header-con">
+		<div class="pn-nav">
+			<ul class="list-nav">
+				<li class="list-nav-item list-nav-item1 current"><a href="#" target="_blank" class="list-nav-c">首页</a></li>
+				<li class="list-nav-item list-nav-item2"><a href="#" target="_blank" class="list-nav-c">新闻</a></li>
+				<li class="list-nav-item list-nav-item3"><a href="#" target="_blank" class="list-nav-c">视频</a></li>
+				<li class="list-nav-item list-nav-item4"><a href="#" target="_blank" class="list-nav-c">攻略</a></li>
+				<li class="list-nav-item list-nav-item5"><a href="#" target="_blank" class="list-nav-c">美图</a></li>
+			</ul>
+		</div>
+		<div class="pn-quick-start">
+			<div class="box-quick-start">
+				<a href="#" target="_blank">MM靓图</a>
+				<a href="#" target="_blank">精美壁纸搞</a>
+				<a href="#" target="_blank">笑漫画</a>
+				<a href="#" target="_blank">游戏截图</a>
+			</div>
+			<div class="box-quick-start">
+				<a href="#" target="_blank">MM靓图</a>
+				<a href="#" target="_blank">精美壁纸搞</a>
+				<a href="#" target="_blank">笑漫画</a>
+				<a href="#" target="_blank">游戏截图</a>
+			</div>
+			<div class="box-quick-start">
+				<a href="#" target="_blank">MM靓图</a>
+				<a href="#" target="_blank">精美壁纸搞</a>
+				<a href="#" target="_blank">笑漫画</a>
+				<a href="#" target="_blank">游戏截图</a>
+			</div>
+		</div>
+	</div>
+</div><!--end the header-->

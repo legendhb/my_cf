@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>文章列表</title>
+<link href="http://ue.17173cdn.com/cache/lib/v2/reset-and-utils-1.0.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/tabs.all.min.js"></script>
+<!--[if IE 6]>
+	<script type="text/javascript" src="js/ddpng-0.0.8a.min.js"></script>
+	<script type="text/javascript src="js/ie6.js"></script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="wrapper">
+		<!--#include virtual="inc/inc-header.shtml"-->
+		<div class="content content-ex">
+			<div class="subpage clearfix">
+				<div class="subpage-c1">
+					<div class="comm-pn pn-article-list">
+						<div class="comm-pn-hd"><h2 class="tit">新闻</h2></div>
+						<div class="comm-pn-bd js-tab1">
+							<div class="gb-tab-pn">
+								<div class="pn-article-list-con">
+									<ul class="gb-list3 comm-ptlist1 comm-ptlist1-ex">
+										<li class="gb-list3-item">
+											<div class="gb-list3-c3">
+												<h2 class="tit">官方新闻</h2>
+												<span class="date">2014-12-25</span>
+											</div>
+											<div class="gb-list3-c1"><a target="_blank" href="#"><img alt="" src="img/img-130-85.jpg" width="130" height="85" class="avatar" /></a></div>
+											<div class="gb-list3-c2">
+												<h3 class="tit"><a target="_blank" href="#">战队巡礼白鲨电子竞技俱乐部</a></h3>
+												<p class="txt">因为道聚城积分政策为年度清零，次年1月1日计算下一个年度的积分。2014年12月31日为道聚城2014年积分兑换最后一天，2015年1月1日积分将会清零</p>
+											</div>
+										</li>
+										<li class="gb-list3-item gb-list3-item-ex">
+											<div class="gb-list3-c3">
+												<h2 class="tit">赛事资讯</h2>
+												<span class="date">2014-12-25</span>
+											</div>
+											<div class="gb-list3-c1"><a target="_blank" href="#"><img alt="" src="img/img-130-85.jpg" width="130" height="85" class="avatar" /></a></div>
+											<div class="gb-list3-c2">
+												<h3 class="tit"><a target="_blank" href="#">战队巡礼白鲨电子竞技俱乐部</a></h3>
+												<p class="txt">因为道聚城积分政策为年度清零，次年1月1日计算下一个年度的积分。2014年12月31日为道聚城2014年积分兑换最后一天，2015年1月1日积分将会清零</p>
+											</div>
+										</li>
+										<li class="gb-list3-item gb-list3-item-ex1">
+											<div class="gb-list3-c3">
+												<h2 class="tit">独家专访</h2>
+												<span class="date">2014-12-25</span>
+											</div>
+											<div class="gb-list3-c1"><a target="_blank" href="#"><img alt="" src="img/img-130-85.jpg" width="130" height="85" class="avatar" /></a></div>
+											<div class="gb-list3-c2">
+												<h3 class="tit"><a target="_blank" href="#">战队巡礼白鲨电子竞技俱乐部</a></h3>
+												<p class="txt">因为道聚城积分政策为年度清零，次年1月1日计算下一个年度的积分。2014年12月31日为道聚城2014年积分兑换最后一天，2015年1月1日积分将会清零</p>
+											</div>
+										</li>
+										<li class="gb-list3-item">
+											<div class="gb-list3-c3">
+												<h2 class="tit">官方新闻</h2>
+												<span class="date">2014-12-25</span>
+											</div>
+											<div class="gb-list3-c1"><a target="_blank" href="#"><img alt="" src="img/img-130-85.jpg" width="130" height="85" class="avatar" /></a></div>
+											<div class="gb-list3-c2">
+												<h3 class="tit"><a target="_blank" href="#">战队巡礼白鲨电子竞技俱乐部</a></h3>
+												<p class="txt">因为道聚城积分政策为年度清零，次年1月1日计算下一个年度的积分。2014年12月31日为道聚城2014年积分兑换最后一天，2015年1月1日积分将会清零</p>
+											</div>
+										</li>
+										<li class="gb-list3-item gb-list3-item-ex">
+											<div class="gb-list3-c3">
+												<h2 class="tit">赛事资讯</h2>
+												<span class="date">2014-12-25</span>
+											</div>
+											<div class="gb-list3-c1"><a target="_blank" href="#"><img alt="" src="img/img-130-85.jpg" width="130" height="85" class="avatar" /></a></div>
+											<div class="gb-list3-c2">
+												<h3 class="tit"><a target="_blank" href="#">战队巡礼白鲨电子竞技俱乐部</a></h3>
+												<p class="txt">因为道聚城积分政策为年度清零，次年1月1日计算下一个年度的积分。2014年12月31日为道聚城2014年积分兑换最后一天，2015年1月1日积分将会清零</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="pn-article-list-con">
+									<ul class="gb-list3 comm-ptlist1 comm-ptlist1-ex">
+										<li class="gb-list3-item">
+											<div class="gb-list3-c3">
+												<h2 class="tit">官方新闻22</h2>
+												<span class="date">2014-12-25</span>
+											</div>
+											<div class="gb-list3-c1"><a target="_blank" href="#"><img alt="" src="img/img-130-85.jpg" width="130" height="85" class="avatar" /></a></div>
+											<div class="gb-list3-c2">
+												<h3 class="tit"><a target="_blank" href="#">战队巡礼白鲨电子竞技俱乐部</a></h3>
+												<p class="txt">因为道聚城积分政策为年度清零，次年1月1日计算下一个年度的积分。2014年12月31日为道聚城2014年积分兑换最后一天，2015年1月1日积分将会清零</p>
+											</div>
+										</li>
+										<li class="gb-list3-item gb-list3-item-ex">
+											<div class="gb-list3-c3">
+												<h2 class="tit">赛事资讯222</h2>
+												<span class="date">2014-12-25</span>
+											</div>
+											<div class="gb-list3-c1"><a target="_blank" href="#"><img alt="" src="img/img-130-85.jpg" width="130" height="85" class="avatar" /></a></div>
+											<div class="gb-list3-c2">
+												<h3 class="tit"><a target="_blank" href="#">战队巡礼白鲨电子竞技俱乐部</a></h3>
+												<p class="txt">因为道聚城积分政策为年度清零，次年1月1日计算下一个年度的积分。2014年12月31日为道聚城2014年积分兑换最后一天，2015年1月1日积分将会清零</p>
+											</div>
+										</li>
+										<li class="gb-list3-item gb-list3-item-ex1">
+											<div class="gb-list3-c3">
+												<h2 class="tit">独家专访22</h2>
+												<span class="date">2014-12-25</span>
+											</div>
+											<div class="gb-list3-c1"><a target="_blank" href="#"><img alt="" src="img/img-130-85.jpg" width="130" height="85" class="avatar" /></a></div>
+											<div class="gb-list3-c2">
+												<h3 class="tit"><a target="_blank" href="#">战队巡礼白鲨电子竞技俱乐部</a></h3>
+												<p class="txt">因为道聚城积分政策为年度清零，次年1月1日计算下一个年度的积分。2014年12月31日为道聚城2014年积分兑换最后一天，2015年1月1日积分将会清零</p>
+											</div>
+										</li>
+										<li class="gb-list3-item">
+											<div class="gb-list3-c3">
+												<h2 class="tit">官方新闻22</h2>
+												<span class="date">2014-12-25</span>
+											</div>
+											<div class="gb-list3-c1"><a target="_blank" href="#"><img alt="" src="img/img-130-85.jpg" width="130" height="85" class="avatar" /></a></div>
+											<div class="gb-list3-c2">
+												<h3 class="tit"><a target="_blank" href="#">战队巡礼白鲨电子竞技俱乐部</a></h3>
+												<p class="txt">因为道聚城积分政策为年度清零，次年1月1日计算下一个年度的积分。2014年12月31日为道聚城2014年积分兑换最后一天，2015年1月1日积分将会清零</p>
+											</div>
+										</li>
+										<li class="gb-list3-item gb-list3-item-ex">
+											<div class="gb-list3-c3">
+												<h2 class="tit">赛事资讯22</h2>
+												<span class="date">2014-12-25</span>
+											</div>
+											<div class="gb-list3-c1"><a target="_blank" href="#"><img alt="" src="img/img-130-85.jpg" width="130" height="85" class="avatar" /></a></div>
+											<div class="gb-list3-c2">
+												<h3 class="tit"><a target="_blank" href="#">战队巡礼白鲨电子竞技俱乐部</a></h3>
+												<p class="txt">因为道聚城积分政策为年度清零，次年1月1日计算下一个年度的积分。2014年12月31日为道聚城2014年积分兑换最后一天，2015年1月1日积分将会清零</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="pn-article-list-con">
+									<ul class="gb-list3 comm-ptlist1 comm-ptlist1-ex">
+										<li class="gb-list3-item">
+											<div class="gb-list3-c3">
+												<h2 class="tit">官方新闻333</h2>
+												<span class="date">2014-12-25</span>
+											</div>
+											<div class="gb-list3-c1"><a target="_blank" href="#"><img alt="" src="img/img-130-85.jpg" width="130" height="85" class="avatar" /></a></div>
+											<div class="gb-list3-c2">
+												<h3 class="tit"><a target="_blank" href="#">战队巡礼白鲨电子竞技俱乐部</a></h3>
+												<p class="txt">因为道聚城积分政策为年度清零，次年1月1日计算下一个年度的积分。2014年12月31日为道聚城2014年积分兑换最后一天，2015年1月1日积分将会清零</p>
+											</div>
+										</li>
+										<li class="gb-list3-item gb-list3-item-ex">
+											<div class="gb-list3-c3">
+												<h2 class="tit">赛事资讯333</h2>
+												<span class="date">2014-12-25</span>
+											</div>
+											<div class="gb-list3-c1"><a target="_blank" href="#"><img alt="" src="img/img-130-85.jpg" width="130" height="85" class="avatar" /></a></div>
+											<div class="gb-list3-c2">
+												<h3 class="tit"><a target="_blank" href="#">战队巡礼白鲨电子竞技俱乐部</a></h3>
+												<p class="txt">因为道聚城积分政策为年度清零，次年1月1日计算下一个年度的积分。2014年12月31日为道聚城2014年积分兑换最后一天，2015年1月1日积分将会清零</p>
+											</div>
+										</li>
+										<li class="gb-list3-item gb-list3-item-ex1">
+											<div class="gb-list3-c3">
+												<h2 class="tit">独家专访33</h2>
+												<span class="date">2014-12-25</span>
+											</div>
+											<div class="gb-list3-c1"><a target="_blank" href="#"><img alt="" src="img/img-130-85.jpg" width="130" height="85" class="avatar" /></a></div>
+											<div class="gb-list3-c2">
+												<h3 class="tit"><a target="_blank" href="#">战队巡礼白鲨电子竞技俱乐部</a></h3>
+												<p class="txt">因为道聚城积分政策为年度清零，次年1月1日计算下一个年度的积分。2014年12月31日为道聚城2014年积分兑换最后一天，2015年1月1日积分将会清零</p>
+											</div>
+										</li>
+										<li class="gb-list3-item">
+											<div class="gb-list3-c3">
+												<h2 class="tit">官方新闻33</h2>
+												<span class="date">2014-12-25</span>
+											</div>
+											<div class="gb-list3-c1"><a target="_blank" href="#"><img alt="" src="img/img-130-85.jpg" width="130" height="85" class="avatar" /></a></div>
+											<div class="gb-list3-c2">
+												<h3 class="tit"><a target="_blank" href="#">战队巡礼白鲨电子竞技俱乐部</a></h3>
+												<p class="txt">因为道聚城积分政策为年度清零，次年1月1日计算下一个年度的积分。2014年12月31日为道聚城2014年积分兑换最后一天，2015年1月1日积分将会清零</p>
+											</div>
+										</li>
+										<li class="gb-list3-item gb-list3-item-ex">
+											<div class="gb-list3-c3">
+												<h2 class="tit">赛事资讯333</h2>
+												<span class="date">2014-12-25</span>
+											</div>
+											<div class="gb-list3-c1"><a target="_blank" href="#"><img alt="" src="img/img-130-85.jpg" width="130" height="85" class="avatar" /></a></div>
+											<div class="gb-list3-c2">
+												<h3 class="tit"><a target="_blank" href="#">战队巡礼白鲨电子竞技俱乐部</a></h3>
+												<p class="txt">因为道聚城积分政策为年度清零，次年1月1日计算下一个年度的积分。2014年12月31日为道聚城2014年积分兑换最后一天，2015年1月1日积分将会清零</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="pn-article-list-con">
+									<ul class="gb-list3 comm-ptlist1 comm-ptlist1-ex">
+										<li class="gb-list3-item">
+											<div class="gb-list3-c3">
+												<h2 class="tit">官方新闻444</h2>
+												<span class="date">2014-12-25</span>
+											</div>
+											<div class="gb-list3-c1"><a target="_blank" href="#"><img alt="" src="img/img-130-85.jpg" width="130" height="85" class="avatar" /></a></div>
+											<div class="gb-list3-c2">
+												<h3 class="tit"><a target="_blank" href="#">战队巡礼白鲨电子竞技俱乐部</a></h3>
+												<p class="txt">因为道聚城积分政策为年度清零，次年1月1日计算下一个年度的积分。2014年12月31日为道聚城2014年积分兑换最后一天，2015年1月1日积分将会清零</p>
+											</div>
+										</li>
+										<li class="gb-list3-item gb-list3-item-ex">
+											<div class="gb-list3-c3">
+												<h2 class="tit">赛事资讯444</h2>
+												<span class="date">2014-12-25</span>
+											</div>
+											<div class="gb-list3-c1"><a target="_blank" href="#"><img alt="" src="img/img-130-85.jpg" width="130" height="85" class="avatar" /></a></div>
+											<div class="gb-list3-c2">
+												<h3 class="tit"><a target="_blank" href="#">战队巡礼白鲨电子竞技俱乐部</a></h3>
+												<p class="txt">因为道聚城积分政策为年度清零，次年1月1日计算下一个年度的积分。2014年12月31日为道聚城2014年积分兑换最后一天，2015年1月1日积分将会清零</p>
+											</div>
+										</li>
+										<li class="gb-list3-item gb-list3-item-ex1">
+											<div class="gb-list3-c3">
+												<h2 class="tit">独家专访444</h2>
+												<span class="date">2014-12-25</span>
+											</div>
+											<div class="gb-list3-c1"><a target="_blank" href="#"><img alt="" src="img/img-130-85.jpg" width="130" height="85" class="avatar" /></a></div>
+											<div class="gb-list3-c2">
+												<h3 class="tit"><a target="_blank" href="#">战队巡礼白鲨电子竞技俱乐部</a></h3>
+												<p class="txt">因为道聚城积分政策为年度清零，次年1月1日计算下一个年度的积分。2014年12月31日为道聚城2014年积分兑换最后一天，2015年1月1日积分将会清零</p>
+											</div>
+										</li>
+										<li class="gb-list3-item">
+											<div class="gb-list3-c3">
+												<h2 class="tit">官方新闻444</h2>
+												<span class="date">2014-12-25</span>
+											</div>
+											<div class="gb-list3-c1"><a target="_blank" href="#"><img alt="" src="img/img-130-85.jpg" width="130" height="85" class="avatar" /></a></div>
+											<div class="gb-list3-c2">
+												<h3 class="tit"><a target="_blank" href="#">战队巡礼白鲨电子竞技俱乐部</a></h3>
+												<p class="txt">因为道聚城积分政策为年度清零，次年1月1日计算下一个年度的积分。2014年12月31日为道聚城2014年积分兑换最后一天，2015年1月1日积分将会清零</p>
+											</div>
+										</li>
+										<li class="gb-list3-item gb-list3-item-ex">
+											<div class="gb-list3-c3">
+												<h2 class="tit">赛事资讯4444</h2>
+												<span class="date">2014-12-25</span>
+											</div>
+											<div class="gb-list3-c1"><a target="_blank" href="#"><img alt="" src="img/img-130-85.jpg" width="130" height="85" class="avatar" /></a></div>
+											<div class="gb-list3-c2">
+												<h3 class="tit"><a target="_blank" href="#">战队巡礼白鲨电子竞技俱乐部</a></h3>
+												<p class="txt">因为道聚城积分政策为年度清零，次年1月1日计算下一个年度的积分。2014年12月31日为道聚城2014年积分兑换最后一天，2015年1月1日积分将会清零</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="paging">
+								<a class="backward" href="javascript:;"><i></i>上一页</a>
+								<ul class="gb-tab" style="display:none">
+									<li class="gb-tab-item"><a href="javascript:;" class="gb-tab-c">1</a></li>
+									<li class="gb-tab-item"><a href="javascript:;" class="gb-tab-c">2</a></li>
+									<li class="gb-tab-item"><a href="javascript:;" class="gb-tab-c">3</a></li>
+									<li class="gb-tab-item"><a href="javascript:;" class="gb-tab-c">4</a></li>
+								</ul>
+								<a class="forward" href="javascript:;">下一页<i></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="subpage-c2">
+					<!--#include virtual="inc/inc-side.shtml"-->
+				</div>
+			</div>
+		</div><!--end the content-->
+		<!--#include virtual="inc/inc-footer.shtml"-->
+	</div><!--end the wrapper-->	
+<script type="text/javascript" src="js/design.js"></script>
+</body>
+</html>

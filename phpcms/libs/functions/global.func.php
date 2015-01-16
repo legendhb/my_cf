@@ -1735,5 +1735,21 @@ function get_vid($contentid = 0, $catid = 0, $isspecial = 0) {
 		return $minite.":".$secend;
 	}
 
- } 
+ }
+
+/**
+ * 根据模版路径生成静态资源路径
+ * @param $cfgDir
+ * @param string $tpl
+ * @return string
+ */
+function tplAssetsDir($cfgDir, $tpl='default'){
+    if($tpl == 'default')
+        $tpl = '';
+    else
+        $tpl .='/';
+    $prefix = dirname($cfgDir) . '/';
+    $suffix = str_replace($prefix, '', $cfgDir);
+    return "{$prefix}{$tpl}{$suffix}";
+}
 ?>

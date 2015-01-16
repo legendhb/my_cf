@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>视频详情</title>
+<link href="http://ue.17173cdn.com/cache/lib/v2/reset-and-utils-1.0.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<!--[if IE 6]>
+	<script type="text/javascript" src="js/ddpng-0.0.8a.min.js"></script>
+	<script type="text/javascript src="js/ie6.js"></script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="wrapper">
+		<!--#include virtual="inc/inc-header.shtml"-->
+		<div class="content content-ex">
+			<div class="subpage clearfix subpage-video-con">
+					<div class="pn-article pn-article-video">
+						<div class="pn-article-hd">
+							<h1 class="tit">韩外援LOL辱骂国人遭草莓怒喷</h1>
+							<div class="box-info">
+								<span class="author"><a href="#" target="_blank">草莓</a></span>
+								<span class="date">2015-01-05 16:03:14</span>
+							</div>
+						</div>
+						<div class="pn-article-bd">
+							<div class="mod-guide">
+								<p>大家好，我是PE的新打野MOON。很抱歉刚才的一盘RANK中由于语言交流不通，而让广大中国玩家因刚刚
+游戏内的对话，对我和俱乐部产生了误会，在此首先对广大的中国玩家表示歉意。然后我想解释一下事件截
+图中对话的本意，</p>
+							</div>
+							<div class="pn-article-con">
+								<div class="pn-flash">
+									<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,1,51,66">
+										<param name="allowScriptAccess" value="always">
+										<param name="allowFullScreen" value="true">
+										<param name="movie" value="http://f.v.17173cdn.com/player_f2/MTU2NDQ4Mzc.swf">
+										<param name="wmode" value="transparent">
+										<param name="FlashVars" value="Flvid=1596058">
+										<embed src="http://f.v.17173cdn.com/player_f2/MTU2NDQ4Mzc.swf" flashvars="Flvid=1596058" wmode="transparent" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" name="ExternalInterface"></embed>
+									</object>
+								</div>
+								<p>近期，《穿越火线》校园站正式在哈尔滨理工大学、石家庄铁道学院、兰州大学、郑州航空工业管理学院等全国多所大学拉开帷幕，激情四射的学子玩家有的在自习室托举CF2.0海报摆出千手观音造型、有的用饺子摆拍出“CF”字样造型、有的则穿上迷彩服装玩起来cosplay、有的则使用任务书在自习室墙上组合出“CF2.0”字样、有的则为校车穿上了“火线军装”等等各类创意层出不穷，表达出了学子玩家对《穿越火线》最新版本“CF2.0革新时代”的热爱。</p>
+								<p>近期，《穿越火线》校园站正式在哈尔滨理工大学、石家庄铁道学院、兰州大学、郑州航空工业管理学院等全国多所大学拉开帷幕，激情四射的学子玩家有的在自习室托举CF2.0海报摆出千手观音造型、有的用饺子摆拍出“CF”字样造型、有的则穿上迷彩服装玩起来cosplay、有的则使用任务书在自习室墙上组合出“CF2.0”字样、有的则为校车穿上了“火线军装”等等各类创意层出不穷，表达出了学子玩家对《穿越火线》最新版本“CF2.0革新时代”的热爱。</p>
+							</div>
+
+						</div>
+					</div>
+					<div class="comm-pn2 comm-pn2-ex">
+						<div class="comm-pn2-hd">
+							<i class="ico-adorn"></i>
+							<h2 class="tit">热门视频</h2>
+							<span class="more"><a href="#" target="_blank">更多<i class="ico-plus"></i></a></span>
+						</div>
+						<div class="comm-pn2-bd">
+							<ul class="gb-list2 comm-plist col4">
+								<li class="gb-list2-item">
+									<a href="#" class="gb-list2-con" target="_blank">
+										<span class="gb-list2-c1">
+											<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+											<b class="mask"></b><i class="ico-video"><i class="ico-in"></i></i>
+										</span>
+										<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+									</a>
+								</li>
+								<li class="gb-list2-item">
+									<a href="#" class="gb-list2-con" target="_blank">
+										<span class="gb-list2-c1">
+											<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+											<b class="mask"></b><i class="ico-video"><i class="ico-in"></i></i>
+										</span>
+										<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+									</a>
+								</li>
+								<li class="gb-list2-item">
+									<a href="#" class="gb-list2-con" target="_blank">
+										<span class="gb-list2-c1">
+											<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+											<b class="mask"></b><i class="ico-video"><i class="ico-in"></i></i>
+										</span>
+										<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+									</a>
+								</li>
+								<li class="gb-list2-item">
+									<a href="#" class="gb-list2-con" target="_blank">
+										<span class="gb-list2-c1">
+											<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+											<b class="mask"></b><i class="ico-video"><i class="ico-in"></i></i>
+										</span>
+										<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+									</a>
+								</li>
+								<li class="gb-list2-item">
+									<a href="#" class="gb-list2-con" target="_blank">
+										<span class="gb-list2-c1">
+											<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+											<b class="mask"></b><i class="ico-video"><i class="ico-in"></i></i>
+										</span>
+										<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+									</a>
+								</li>
+								<li class="gb-list2-item">
+									<a href="#" class="gb-list2-con" target="_blank">
+										<span class="gb-list2-c1">
+											<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+											<b class="mask"></b><i class="ico-video"><i class="ico-in"></i></i>
+										</span>
+										<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+									</a>
+								</li>
+								<li class="gb-list2-item">
+									<a href="#" class="gb-list2-con" target="_blank">
+										<span class="gb-list2-c1">
+											<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+											<b class="mask"></b><i class="ico-video"><i class="ico-in"></i></i>
+										</span>
+										<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+									</a>
+								</li>
+								<li class="gb-list2-item">
+									<a href="#" class="gb-list2-con" target="_blank">
+										<span class="gb-list2-c1">
+											<img alt="" src="img/img-227-170.jpg" width="227" height="170" class="avatar" />
+											<b class="mask"></b><i class="ico-video"><i class="ico-in"></i></i>
+										</span>
+										<span class="gb-list2-c2"><span class="txt">凉水解说：救世主神级游击抢肉</span></span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="area area-video-con clearfix">
+						<div class="area-c1"><img src="img/comment.jpg" alt="" /></div>
+						<div class="area-c2">
+							<div class="comm-pn2 pn-side-recomm">
+								<div class="comm-pn2-hd">
+									<i class="ico-adorn"></i>
+									<h2 class="tit">独家推荐</h2>
+									<span class="more"><a href="#" target="_blank">更多<i class="ico-plus"></i></a></span>
+								</div>
+								<div class="comm-pn2-bd">
+									<ul class="gb-list2 comm-plist comm-plist-ex3">
+										<li class="gb-list2-item">
+											<a href="#" class="gb-list2-con" target="_blank">
+												<span class="gb-list2-c1">
+													<img alt="" src="img/img-270-150.jpg" width="270" height="150" class="avatar" />
+												</span>
+												<span class="gb-list2-c3"><span class="txt">CF百城联赛外卡赛月结</span><b class="mask"></b></span>
+											</a>
+										</li>
+										<li class="gb-list2-item">
+											<a href="#" class="gb-list2-con" target="_blank">
+												<span class="gb-list2-c1">
+													<img alt="" src="img/img-270-150.jpg" width="270" height="150" class="avatar" />
+												</span>
+												<span class="gb-list2-c3"><span class="txt">CF百城联赛外卡赛月结</span><b class="mask"></b></span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div><!--end the content-->
+		<!--#include virtual="inc/inc-footer.shtml"-->
+	</div><!--end the wrapper-->	
+<script type="text/javascript" src="js/design.js"></script>
+</body>
+</html>
