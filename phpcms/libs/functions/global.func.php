@@ -698,6 +698,51 @@ function pages($num, $curr_page, $perpage = 20, $urlrule = '', $array = array(),
 			}
 			$more = 1;
 		}
+		if($curr_page>1) {
+			$multipage .= ' <a href="'.pageurl($urlrule, $curr_page-1, $array).'" class="backward"><i></i>'.L('previous').'</a>';
+		}else{
+			$multipage .= ' <a href="javascript:;" class="backward"><i></i>'.L('previous').'</a>';
+		}
+		if($curr_page<$pages) {
+			$multipage .= '<a href="'.pageurl($urlrule, $curr_page+1, $array).'" class="forward"><i></i>'.L('next').'</a>';
+		} elseif($curr_page==$pages) {
+			$multipage .= '<a href="javascript:;" class="forward"><i></i>'.L('next').'</a>';
+		} else {
+			$multipage .= '<a href="javascript:;" class="forward"><i></i>'.L('next').'</a>';
+		}
+	}
+	return $multipage;
+}
+
+function pages_ori($num, $curr_page, $perpage = 20, $urlrule = '', $array = array(),$setpages = 10) {
+	if(defined('URLRULE') && $urlrule == '') {
+		$urlrule = URLRULE;
+		$array = $GLOBALS['URL_ARRAY'];
+	} elseif($urlrule == '') {
+		$urlrule = url_par('page={$page}');
+	}
+	$multipage = '';
+	if($num > $perpage) {
+		$page = $setpages+1;
+		$offset = ceil($setpages/2-1);
+		$pages = ceil($num / $perpage);
+		if (defined('IN_ADMIN') && !defined('PAGES')) define('PAGES', $pages);
+		$from = $curr_page - $offset;
+		$to = $curr_page + $offset;
+		$more = 0;
+		if($page >= $pages) {
+			$from = 2;
+			$to = $pages-1;
+		} else {
+			if($from <= 1) {
+				$to = $page-1;
+				$from = 2;
+			}  elseif($to >= $pages) {
+				$from = $pages-($page-2);
+				$to = $pages-1;
+			}
+			$more = 1;
+		}
 		$multipage .= '<a class="a1">'.$num.L('page_item').'</a>';
 		if($curr_page>0) {
 			$multipage .= ' <a href="'.pageurl($urlrule, $curr_page-1, $array).'" class="a1">'.L('previous').'</a>';
