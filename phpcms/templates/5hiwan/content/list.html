@@ -3,7 +3,7 @@
     <div class="subpage clearfix">
         <div class="subpage-c1">
             <div class="comm-pn pn-article-list">
-                <div class="comm-pn-hd"><h2 class="tit">新闻</h2></div>
+                <div class="comm-pn-hd"><h2 class="tit">{$catname}</h2></div>
                 <div class="comm-pn-bd js-tab1">
                     <div class="gb-tab-pn">
                         <div class="pn-article-list-con">
@@ -15,7 +15,7 @@
                                         <h2 class="tit {$CATEGORYS[$r[catid]][catdir]}">{$CATEGORYS[$r[catid]][catname]}</h2>
                                         <span class="date">{date('Y-m-d',$r[inputtime])}</span>
                                     </div>
-                                    <div class="gb-list3-c1"><a href="{$r[url]}"><img alt="" src="img/img-130-85.jpg" width="130" height="85" class="avatar" /></a></div>
+                                    <div class="gb-list3-c1"><a href="{$r[url]}"><img alt="" src="{$r[thumb]}" width="130" height="85" class="avatar" /></a></div>
                                     <div class="gb-list3-c2">
                                         <h3 class="tit"><a href="{$r[url]}">{$r[title]}</a></h3>
                                         <p class="txt">{trim($r[description])}...</p>
@@ -33,11 +33,11 @@
             </div>
         </div>
         <div class="subpage-c2">
-            {template "content","inc_sidebar"}
+            {template "content","inc-sidebar"}
         </div>
     </div>
 </div><!--end the content-->
 {template "content","footer"}
-<script type="text/javascript" src="js/design.js"></script>
+<script type="text/javascript" src="{tplAssetsDir(JS_PATH, 'hw')}design.js"></script>
 </body>
 </html>

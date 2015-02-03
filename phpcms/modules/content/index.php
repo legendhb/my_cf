@@ -98,7 +98,7 @@ class index {
 //		}
 
 		//不安装评论模块，直接使用畅言
-		$allow_comment = isset($allow_comment) ? $allow_comment : 1;
+		$allow_comment = isset($allow_comment) ? $allow_comment : 0;        //默认关闭评论
 		if($allow_comment){
 			//生成评论id
 			$comment_id = "content_{$siteid}_{$catid}_{$id}";

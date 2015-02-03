@@ -3,83 +3,25 @@
 <div class="first-screen clearfix">
     <div class="first-screen-c1">
         <div class="pn-focus-news">
-            <h2 class="top-news"><a href="#" target="_blank" class="c-link1">第二届·穿越火线全国新锐战队线上赛规则</a></h2>
-            <p class="rel-links">
-                <a href="#" target="_blank" class="c-link2">CFDL赛事报道</a><span class="sep">|</span>
-                <a href="#" target="_blank" class="c-link2">领取英雄武器</a><span class="sep">|</span>
-                <a href="#" target="_blank" class="c-link2">TPW S3赛季</a>
-            </p>
-            <h2 class="hot-news"><a href="#" target="_blank" class="c-link1">又一把平民神器？XM8-圣诞图文评测</a></h2>
-            <p class="rel-links">
-                <a href="#" target="_blank" class="c-link2">CFDL赛事报道</a><span class="sep">|</span>
-                <a href="#" target="_blank" class="c-link2">领取英雄武器</a><span class="sep">|</span>
-                <a href="#" target="_blank" class="c-link2">TPW S3赛季</a>
-            </p>
+            <!-- 首页头条推荐碎片 -->
+            {pc:block pos="index_top_line"}{/pc}
         </div>
+        {pc:content action="position" posid="2" order="listorder DESC" num="6"}
         <ul class="comm-tlist">
+            {loop $data $r}
             <li>
-                <span class="date">12-24</span>
-                <span class="tit"><a title="" target="_blank" href="#">黏住别想跑 CF2.0生化神器MP5-SS评测</a></span>
+                <span class="date">{date('m-d', $r[inputtime])}</span>
+                <span class="tit"><a title="" target="_blank" href="#">{$r[title]}</a></span>
             </li>
-            <li>
-                <span class="date">12-24</span>
-                <span class="tit"><a title="" target="_blank" href="#">黏住别想跑 CF2.0生化神器MP5-SS评测</a></span>
-            </li>
-            <li>
-                <span class="date">12-24</span>
-                <span class="tit"><a title="" target="_blank" href="#">黏住别想跑 CF2.0生化神器MP5-SS评测</a></span>
-            </li>
-            <li>
-                <span class="date">12-24</span>
-                <span class="tit"><a title="" target="_blank" href="#">黏住别想跑 CF2.0生化神器MP5-SS评测</a></span>
-            </li>
-            <li>
-                <span class="date">12-24</span>
-                <span class="tit"><a title="" target="_blank" href="#">黏住别想跑 CF2.0生化神器MP5-SS评测</a></span>
-            </li>
-            <li>
-                <span class="date">12-24</span>
-                <span class="tit"><a title="" target="_blank" href="#">黏住别想跑 CF2.0生化神器MP5-SS评测</a></span>
-            </li>
+            {/loop}
         </ul>
+        {/pc}
         <div class="comm-more"><a href="#" target="_blank">查看更多资讯</a></div>
     </div>
     <div class="first-screen-c2">
         <div class="pn-focus">
-            <div class="pn-focus-c1 gb-tab-pn">
-                <div class="pn-focus-item"><a href="#" target="_blank" class="avatar"><img src="{str_replace('images/', 'img/', tplAssetsDir(IMG_PATH, 'hw'))}img-370-420.jpg" alt="" width="370" height="420" /></a></div>
-                <div class="pn-focus-item"><a href="#" target="_blank" class="avatar"><img src="{str_replace('images/', 'img/', tplAssetsDir(IMG_PATH, 'hw'))}img-370-420.jpg" alt="" width="370" height="420" /></a></div>
-                <div class="pn-focus-item"><a href="#" target="_blank" class="avatar"><img src="{str_replace('images/', 'img/', tplAssetsDir(IMG_PATH, 'hw'))}img-370-420.jpg" alt="" width="370" height="420" /></a></div>
-                <div class="pn-focus-item"><a href="#" target="_blank" class="avatar"><img src="{str_replace('images/', 'img/', tplAssetsDir(IMG_PATH, 'hw'))}img-370-420.jpg" alt="" width="370" height="420" /></a></div>
-            </div>
-            <div class="pn-focus-c2">
-                <ul class="gb-tab pn-focus-tab">
-                    <li class="gb-tab-item">
-                        <a class="gb-tab-c" href="javascript:;">
-                            <span class="gb-tab-c1">全面破解</span>
-                            <span class="gb-tab-c2">新运输船的各种打法</span>
-                        </a>
-                    </li>
-                    <li class="gb-tab-item">
-                        <a class="gb-tab-c" href="javascript:;">
-                            <span class="gb-tab-c1">全面破解</span>
-                            <span class="gb-tab-c2">新运输船的各种打法</span>
-                        </a>
-                    </li>
-                    <li class="gb-tab-item">
-                        <a class="gb-tab-c" href="javascript:;">
-                            <span class="gb-tab-c1">全面破解</span>
-                            <span class="gb-tab-c2">新运输船的各种打法</span>
-                        </a>
-                    </li>
-                    <li class="gb-tab-item">
-                        <a class="gb-tab-c" href="javascript:;">
-                            <span class="gb-tab-c1">全面破解</span>
-                            <span class="gb-tab-c2">新运输船的各种打法</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <!-- 首页大眼睛碎片 -->
+            {pc:block pos="index_big_slider"}
         </div>
     </div>
 </div><!--end the first-screen-->
@@ -222,52 +164,46 @@
         <div class="comm-pn pn-news js-tab">
             <div class="comm-pn-hd">
                 <i class="ico-tit ico-tit-news"></i><h2 class="tit">新闻</h2><h3 class="tit-sub">News</h3>
-                <span class="more"><a href="#" target="_blank">更多<i class="ico-plus"></i></a></span>
+                <span class="more"><a href="/list-1-1.html" target="_blank">更多<i class="ico-plus"></i></a></span>
             </div>
             <div class="comm-pn-bd">
+                {pc:content action="category" catid="1" num="4" siteid="$siteid" order="listorder ASC"}
+                <?php $index = 1; $catIds = array();?>
                 <ul class="gb-tab comm-tab comm-tab-ex">
-                    <li class="gb-tab-item gb-tab-item1"><a href="javascript:;" class="gb-tab-c">高玩视频</a></li>
-                    <li class="gb-tab-item"><a href="javascript:;" class="gb-tab-c">教学视频</a></li>
-                    <li class="gb-tab-item"><a href="javascript:;" class="gb-tab-c">官方视频</a></li>
-                    <li class="gb-tab-item"><a href="javascript:;" class="gb-tab-c">赛事视频</a></li>
+                    {loop $data  $r}
+                    <li class="gb-tab-item<?php if($index==1){echo ' gb-tab-item1';$index++;}?>"><a href="javascript:;" class="gb-tab-c">{$r[catname]}</a></li>
+                    <?php $catIds[1][] = $r[catid];?>
+                    {/loop}
                 </ul>
+                {/pc}
                 <div class="gb-tab-pn">
+                {loop $catIds[1] $cid}
                     <div class="pn-news-con">
+                        {pc:content action="lists" num="1" catid="$cid" where="recmd=1" order="id DESC"}
                         <ul class="gb-list3 comm-ptlist">
+                            {loop $data $r}
                             <li class="gb-list3-item">
-                                <div class="gb-list3-c1"><a target="_blank" href="#"><img width="176" height="119" alt="" src="{str_replace('images/', 'img/', tplAssetsDir(IMG_PATH, 'hw'))}img-176-119.jpg"></a></div>
+                                <div class="gb-list3-c1"><a target="_blank" href="{$r[url]}"><img width="176" height="119" alt="{$r[title]}" src="{$r[thumb]}"></a></div>
                                 <div class="gb-list3-c2">
-                                    <h3 class="tit"><a target="_blank" href="#">公开赛暨CFS中国区总决赛观战指南</a></h3>
-                                    <p class="txt">FPL S6公开赛暨CFS中国区总决赛将在8月22日-24日在上海风云电竞馆打响，这一场高手之间的3日对抗，究竟是分赛区队伍力压群雄挺进四</p>
+                                    <h3 class="tit"><a target="_blank" href="{$r[url]}">{truncateStr($r[title], 56)}{if myStrlen($r[title])>56}...{/if}</a></h3>
+                                    <p class="txt">{truncateStr($r[description], 120)}{if myStrlen($r[description])>120}...{/if}</p>
                                 </div>
                             </li>
+                            {/loop}
                         </ul>
+                        {/pc}
+                        {pc:content action="lists" catid="$cid" num="5" where="recmd=0" order="id DESC"}
                         <ul class="comm-tlist">
+                            {loop $data $r}
                             <li>
-                                <span class="date">12-24</span>
-                                <span class="tit"><a title="" target="_blank" href="#">黏住别想跑 CF2.0生化神器MP5-SS评测</a></span>
+                                <span class="date">{date('m-d', $r[inputtime])}</span>
+                                <span class="tit"><a title="{$r[title]}" target="_blank" href="{$r[url]}">{$r[title]}</a></span>
                             </li>
-                            <li>
-                                <span class="date">12-24</span>
-                                <span class="tit"><a title="" target="_blank" href="#">黏住别想跑 CF2.0生化神器MP5-SS评测</a></span>
-                            </li>
-                            <li>
-                                <span class="date">12-24</span>
-                                <span class="tit"><a title="" target="_blank" href="#">黏住别想跑 CF2.0生化神器MP5-SS评测</a></span>
-                            </li>
-                            <li>
-                                <span class="date">12-24</span>
-                                <span class="tit"><a title="" target="_blank" href="#">黏住别想跑 CF2.0生化神器MP5-SS评测</a></span>
-                            </li>
-                            <li>
-                                <span class="date">12-24</span>
-                                <span class="tit"><a title="" target="_blank" href="#">黏住别想跑 CF2.0生化神器MP5-SS评测</a></span>
-                            </li>
+                            {/loop}
                         </ul>
+                        {/pc}
                     </div>
-                    <div class="pn-news-con">222</div>
-                    <div class="pn-news-con">333</div>
-                    <div class="pn-news-con">444</div>
+                {/loop}
                 </div>
             </div>
         </div>
@@ -275,70 +211,48 @@
     <div class="area2-c2">
         <div class="comm-pn pn-strategy js-tab">
             <div class="comm-pn-hd">
-                <i class="ico-tit ico-tit-news1"></i><h2 class="tit">攻略</h2><h3 class="tit-sub">News</h3>
-                <span class="more"><a href="#" target="_blank">更多<i class="ico-plus"></i></a></span>
+                <i class="ico-tit ico-tit-news1"></i><h2 class="tit">攻略</h2><h3 class="tit-sub">Guides</h3>
+                <span class="more"><a href="/list-11-1.html" target="_blank">更多<i class="ico-plus"></i></a></span>
             </div>
             <div class="comm-pn-bd">
+                {pc:content action="category" catid="11" num="4" siteid="$siteid" order="listorder ASC"}
+                <?php $index = 1; $catIds = array();?>
                 <ul class="gb-tab comm-tab comm-tab-ex">
-                    <li class="gb-tab-item gb-tab-item1"><a href="javascript:;" class="gb-tab-c">高玩视频</a></li>
-                    <li class="gb-tab-item"><a href="javascript:;" class="gb-tab-c">教学视频</a></li>
-                    <li class="gb-tab-item"><a href="javascript:;" class="gb-tab-c">官方视频</a></li>
-                    <li class="gb-tab-item"><a href="javascript:;" class="gb-tab-c">赛事视频</a></li>
+                    {loop $data  $r}
+                    <li class="gb-tab-item<?php if($index==1){echo ' gb-tab-item1';$index++;}?>"><a href="javascript:;" class="gb-tab-c">{$r[catname]}</a></li>
+                    <?php $catIds[11][] = $r[catid];?>
+                    {/loop}
                 </ul>
+                {/pc}
                 <div class="gb-tab-pn">
+                    {loop $catIds[11] $cid}
                     <div class="pn-strategy-con">
+                        {pc:content action="lists" num="3" catid="$cid" where="recmd=1" order="id DESC"}
                         <ul class="gb-list2 comm-plist comm-plist-ex col3">
+                            {loop $data $r}
                             <li class="gb-list2-item">
-                                <a href="#" class="gb-list2-con" target="_blank">
+                                <a href="{$r[url]}" class="gb-list2-con" target="_blank">
 												<span class="gb-list2-c1">
-													<img alt="" src="{str_replace('images/', 'img/', tplAssetsDir(IMG_PATH, 'hw'))}img-140-95.jpg" width="140" height="95" class="avatar" />
+													<img alt="{$r[title]}" src="{$r[thumb]}" width="140" height="95" class="avatar" />
 												</span>
-                                    <span class="gb-list2-c2"><span class="txt">公开赛暨CFS中国</span></span>
+                                    <span class="gb-list2-c2"><span class="txt">{truncateStr($r[title], 20)}{if myStrlen($r[title])>20}...{/if}</span></span>
                                 </a>
                             </li>
-                            <li class="gb-list2-item">
-                                <a href="#" class="gb-list2-con" target="_blank">
-												<span class="gb-list2-c1">
-													<img alt="" src="{str_replace('images/', 'img/', tplAssetsDir(IMG_PATH, 'hw'))}img-140-95.jpg" width="140" height="95" class="avatar" />
-												</span>
-                                    <span class="gb-list2-c2"><span class="txt">公开赛暨CFS中国</span></span>
-                                </a>
-                            </li>
-                            <li class="gb-list2-item">
-                                <a href="#" class="gb-list2-con" target="_blank">
-												<span class="gb-list2-c1">
-													<img alt="" src="{str_replace('images/', 'img/', tplAssetsDir(IMG_PATH, 'hw'))}img-140-95.jpg" width="140" height="95" class="avatar" />
-												</span>
-                                    <span class="gb-list2-c2"><span class="txt">公开赛暨CFS中国</span></span>
-                                </a>
-                            </li>
+                            {/loop}
                         </ul>
+                        {/pc}
+                        {pc:content action="lists" catid="$cid" num="5" where="recmd=0" order="id DESC"}
                         <ul class="comm-tlist">
+                            {loop $data $r}
                             <li>
-                                <span class="date">12-24</span>
-                                <span class="tit"><a title="" target="_blank" href="#">黏住别想跑 CF2.0生化神器MP5-SS评测</a></span>
+                                <span class="date">{date('m-d', $r[inputtime])}</span>
+                                <span class="tit"><a title="{$r[title]}" target="_blank" href="{$r[url]}">{$r[title]}</a></span>
                             </li>
-                            <li>
-                                <span class="date">12-24</span>
-                                <span class="tit"><a title="" target="_blank" href="#">黏住别想跑 CF2.0生化神器MP5-SS评测</a></span>
-                            </li>
-                            <li>
-                                <span class="date">12-24</span>
-                                <span class="tit"><a title="" target="_blank" href="#">黏住别想跑 CF2.0生化神器MP5-SS评测</a></span>
-                            </li>
-                            <li>
-                                <span class="date">12-24</span>
-                                <span class="tit"><a title="" target="_blank" href="#">黏住别想跑 CF2.0生化神器MP5-SS评测</a></span>
-                            </li>
-                            <li>
-                                <span class="date">12-24</span>
-                                <span class="tit"><a title="" target="_blank" href="#">黏住别想跑 CF2.0生化神器MP5-SS评测</a></span>
-                            </li>
+                            {/loop}
                         </ul>
+                        {/pc}
                     </div>
-                    <div class="pn-strategy-con">222</div>
-                    <div class="pn-strategy-con">33</div>
-                    <div class="pn-strategy-con">444</div>
+                    {/loop}
                 </div>
             </div>
         </div>

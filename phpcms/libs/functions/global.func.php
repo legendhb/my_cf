@@ -1797,4 +1797,36 @@ function tplAssetsDir($cfgDir, $tpl='default'){
     $suffix = str_replace($prefix, '', $cfgDir);
     return "{$prefix}{$tpl}{$suffix}";
 }
+
+/**
+ * 计算字符串长度，1个中文字符算2位，1个英文字符算1位
+ * @param $value
+ */
+function myStrlen($value){
+    //strlen中1个中文算3位，1个英文算1位，mb_strlen在utf-8编码下中文和英文都算1位
+    //故假设n个中文m个英文，strlen出来3n+m，mb_strlen在utf-8出来n+m
+    //于是((3n+m)+(n+m))/2 = (4n+2m)/2=2n+m
+    //该算法可能在某些特殊字符集结果下出现不准确的情况
+    return ceil((strlen($value)+mb_strlen($value, 'utf-8'))/2);
+}
+
+/**
+ * 截取字符（按照一个中文占两个字符，一个英文占一个字符计算，截取最大长度）
+ * @param string $value
+ * @param integer $maxLength
+ */
+function truncateStr($value, $maxLength=10){
+    $tmp = $return = '';
+    $return_length = 0;
+    $length = mb_strlen($value);
+    do{
+        $tmp .= mb_substr($value, 0, 1, 'utf-8');
+        if(myStrlen($tmp) > $maxLength){
+            break;
+        }
+        $return = $tmp;
+        $value = mb_substr($value, 1, $length, 'utf-8');
+    }while (mb_strlen($value, 'utf-8') >= 1);
+    return $return;
+}
 ?>

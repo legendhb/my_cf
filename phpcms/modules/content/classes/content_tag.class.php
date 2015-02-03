@@ -60,18 +60,18 @@ class content_tag {
 	public function lists($data) {
 		$catid = intval($data['catid']);
 		if(!$this->set_modelid($catid)) return false;
-		if(isset($data['where'])) {
-			$sql = $data['where'];
-		} else {
-			$thumb = intval($data['thumb']) ? " AND thumb != ''" : '';
-			if($this->category[$catid]['child']) {
-				$catids_str = $this->category[$catid]['arrchildid'];
-				$pos = strpos($catids_str,',')+1;
-				$catids_str = substr($catids_str, $pos);
-				$sql = "status=99 AND catid IN ($catids_str)".$thumb;
-			} else {
-				$sql = "status=99 AND catid='$catid'".$thumb;
-			}
+        $thumb = intval($data['thumb']) ? " AND thumb != ''" : '';
+        if($this->category[$catid]['child']) {
+            $catids_str = $this->category[$catid]['arrchildid'];
+            $pos = strpos($catids_str,',')+1;
+            $catids_str = substr($catids_str, $pos);
+            $sql = "status=99 AND catid IN ($catids_str)".$thumb;
+        } else {
+            $sql = "status=99 AND catid='$catid'".$thumb;
+        }
+        //如果有设置where字段，则附加上where，修改了原先覆盖where的问题
+		if(!empty($data['where'])) {
+			$sql .= " AND {$data['where']}";
 		}
 		$order = $data['order'];
 
