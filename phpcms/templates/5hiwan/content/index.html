@@ -6,12 +6,12 @@
             <!-- 首页头条推荐碎片 -->
             {pc:block pos="index_top_line"}{/pc}
         </div>
-        {pc:content action="position" posid="2" order="listorder DESC" num="6"}
+        {pc:content action="position" posid="2" order="listorder ASC" num="6"}
         <ul class="comm-tlist">
             {loop $data $r}
             <li>
                 <span class="date">{date('m-d', $r[inputtime])}</span>
-                <span class="tit"><a title="" target="_blank" href="#">{$r[title]}</a></span>
+                <span class="tit"><a title="" target="_blank" href="{$r[url]}">{$r[title]}</a></span>
             </li>
             {/loop}
         </ul>
@@ -179,7 +179,7 @@
                 <div class="gb-tab-pn">
                 {loop $catIds[1] $cid}
                     <div class="pn-news-con">
-                        {pc:content action="lists" num="1" catid="$cid" where="recmd=1" order="id DESC"}
+                        {pc:content action="lists" num="1" catid="$cid" where="recmd=1" order="listorder ASC,id DESC"}
                         <ul class="gb-list3 comm-ptlist">
                             {loop $data $r}
                             <li class="gb-list3-item">
@@ -192,7 +192,7 @@
                             {/loop}
                         </ul>
                         {/pc}
-                        {pc:content action="lists" catid="$cid" num="5" where="recmd=0" order="id DESC"}
+                        {pc:content action="lists" catid="$cid" num="5" where="recmd=0" order="listorder ASC,id DESC"}
                         <ul class="comm-tlist">
                             {loop $data $r}
                             <li>
@@ -227,7 +227,7 @@
                 <div class="gb-tab-pn">
                     {loop $catIds[11] $cid}
                     <div class="pn-strategy-con">
-                        {pc:content action="lists" num="3" catid="$cid" where="recmd=1" order="id DESC"}
+                        {pc:content action="lists" num="3" catid="$cid" where="recmd=1" order="listorder ASC,id DESC"}
                         <ul class="gb-list2 comm-plist comm-plist-ex col3">
                             {loop $data $r}
                             <li class="gb-list2-item">
@@ -241,7 +241,7 @@
                             {/loop}
                         </ul>
                         {/pc}
-                        {pc:content action="lists" catid="$cid" num="5" where="recmd=0" order="id DESC"}
+                        {pc:content action="lists" catid="$cid" num="5" where="recmd=0" order="listorder ASC,id DESC"}
                         <ul class="comm-tlist">
                             {loop $data $r}
                             <li>
@@ -335,130 +335,54 @@
         </div>
     </div>
 </div><!--end the area3-->
+
 <div class="area area4">
     <div class="comm-pn pn-photo js-tab">
         <div class="comm-pn-hd">
             <i class="ico-tit ico-tit-photo"></i><h2 class="tit">美图</h2><h3 class="tit-sub">Photo</h3>
+            {pc:content action="category" catid="16" num="4" siteid="$siteid" order="listorder ASC"}
+            <?php $catIds = array();?>
             <ul class="gb-tab comm-tab">
-                <li class="gb-tab-item"><a href="javascript:;" class="gb-tab-c">高玩视频</a></li>
-                <li class="gb-tab-item"><a href="javascript:;" class="gb-tab-c">教学视频</a></li>
-                <li class="gb-tab-item"><a href="javascript:;" class="gb-tab-c">官方视频</a></li>
-                <li class="gb-tab-item"><a href="javascript:;" class="gb-tab-c">赛事视频</a></li>
+                {loop $data $r}
+                <li class="gb-tab-item"><a href="javascript:;" class="gb-tab-c">{$r[catname]}</a></li>
+                <?php $catIds[16][] = $r[catid];?>
+                {/loop}
             </ul>
-            <span class="more"><a href="#" target="_blank">更多<i class="ico-plus"></i></a></span>
+            {/pc}
+            <span class="more"><a href="/list-16-1.html" target="_blank">更多<i class="ico-plus"></i></a></span>
         </div>
         <div class="comm-pn-bd gb-tab-pn">
+            {loop $catIds[16] $cid}
             <div class="pn-hoto-con">
+                {pc:content action="lists" num="10" catid="$cid" order="listorder ASC,id DESC"}
                 <ul class="gb-list2 comm-plist comm-plist-ex2 col5">
+                    {loop $data $r}
                     <li class="gb-list2-item">
-                        <a href="#" class="gb-list2-con" target="_blank">
+                        <a href="{$r[url]}" class="gb-list2-con" target="_blank">
 										<span class="gb-list2-c1">
-											<img alt="" src="{str_replace('images/', 'img/', tplAssetsDir(IMG_PATH, 'hw'))}img-180-135.jpg" width="180" height="135" class="avatar" />
+											<img alt="{$r[title]}" src="{$r[thumb]}" width="180" height="135" class="avatar" />
 										</span>
-                            <span class="gb-list2-c2"><span class="txt">CF火线学堂第三期</span></span>
+                            <span class="gb-list2-c2"><span class="txt">{$r[title]}</span></span>
                         </a>
                     </li>
-                    <li class="gb-list2-item">
-                        <a href="#" class="gb-list2-con" target="_blank">
-										<span class="gb-list2-c1">
-											<img alt="" src="{str_replace('images/', 'img/', tplAssetsDir(IMG_PATH, 'hw'))}img-180-135.jpg" width="180" height="135" class="avatar" />
-										</span>
-                            <span class="gb-list2-c2"><span class="txt">CF火线学堂第三期</span></span>
-                        </a>
-                    </li>
-                    <li class="gb-list2-item">
-                        <a href="#" class="gb-list2-con" target="_blank">
-										<span class="gb-list2-c1">
-											<img alt="" src="{str_replace('images/', 'img/', tplAssetsDir(IMG_PATH, 'hw'))}img-180-135.jpg" width="180" height="135" class="avatar" />
-										</span>
-                            <span class="gb-list2-c2"><span class="txt">CF火线学堂第三期</span></span>
-                        </a>
-                    </li>
-                    <li class="gb-list2-item">
-                        <a href="#" class="gb-list2-con" target="_blank">
-										<span class="gb-list2-c1">
-											<img alt="" src="{str_replace('images/', 'img/', tplAssetsDir(IMG_PATH, 'hw'))}img-180-135.jpg" width="180" height="135" class="avatar" />
-										</span>
-                            <span class="gb-list2-c2"><span class="txt">CF火线学堂第三期</span></span>
-                        </a>
-                    </li>
-                    <li class="gb-list2-item">
-                        <a href="#" class="gb-list2-con" target="_blank">
-										<span class="gb-list2-c1">
-											<img alt="" src="{str_replace('images/', 'img/', tplAssetsDir(IMG_PATH, 'hw'))}img-180-135.jpg" width="180" height="135" class="avatar" />
-										</span>
-                            <span class="gb-list2-c2"><span class="txt">CF火线学堂第三期</span></span>
-                        </a>
-                    </li>
-                    <li class="gb-list2-item">
-                        <a href="#" class="gb-list2-con" target="_blank">
-										<span class="gb-list2-c1">
-											<img alt="" src="{str_replace('images/', 'img/', tplAssetsDir(IMG_PATH, 'hw'))}img-180-135.jpg" width="180" height="135" class="avatar" />
-										</span>
-                            <span class="gb-list2-c2"><span class="txt">CF火线学堂第三期</span></span>
-                        </a>
-                    </li>
-                    <li class="gb-list2-item">
-                        <a href="#" class="gb-list2-con" target="_blank">
-										<span class="gb-list2-c1">
-											<img alt="" src="{str_replace('images/', 'img/', tplAssetsDir(IMG_PATH, 'hw'))}img-180-135.jpg" width="180" height="135" class="avatar" />
-										</span>
-                            <span class="gb-list2-c2"><span class="txt">CF火线学堂第三期</span></span>
-                        </a>
-                    </li>
-                    <li class="gb-list2-item">
-                        <a href="#" class="gb-list2-con" target="_blank">
-										<span class="gb-list2-c1">
-											<img alt="" src="{str_replace('images/', 'img/', tplAssetsDir(IMG_PATH, 'hw'))}img-180-135.jpg" width="180" height="135" class="avatar" />
-										</span>
-                            <span class="gb-list2-c2"><span class="txt">CF火线学堂第三期</span></span>
-                        </a>
-                    </li>
-                    <li class="gb-list2-item">
-                        <a href="#" class="gb-list2-con" target="_blank">
-										<span class="gb-list2-c1">
-											<img alt="" src="{str_replace('images/', 'img/', tplAssetsDir(IMG_PATH, 'hw'))}img-180-135.jpg" width="180" height="135" class="avatar" />
-										</span>
-                            <span class="gb-list2-c2"><span class="txt">CF火线学堂第三期</span></span>
-                        </a>
-                    </li>
-                    <li class="gb-list2-item">
-                        <a href="#" class="gb-list2-con" target="_blank">
-										<span class="gb-list2-c1">
-											<img alt="" src="{str_replace('images/', 'img/', tplAssetsDir(IMG_PATH, 'hw'))}img-180-135.jpg" width="180" height="135" class="avatar" />
-										</span>
-                            <span class="gb-list2-c2"><span class="txt">CF火线学堂第三期</span></span>
-                        </a>
-                    </li>
+                    {/loop}
                 </ul>
+                {/pc}
             </div>
-            <div class="pn-hoto-con">2222</div>
-            <div class="pn-hoto-con">333</div>
-            <div class="pn-hoto-con">4444</div>
+            {/loop}
         </div>
     </div>
 </div><!--end the area4-->
 <div class="pn-friends">
     <div class="pn-friends-hd"><h2 class="tit">友情链接</h2></div>
     <div class="pn-friends-bd">
+        {pc:link action="type_list" order="listorder ASC" siteid="1"}
         <ul class="list-friends">
-            <li><a href="#" target="_blank">地下城与勇士</a></li>
-            <li><a href="#" target="_blank">地下城与勇士</a></li>
-            <li><a href="#" target="_blank">地下城与勇士</a></li>
-            <li><a href="#" target="_blank">地下城与勇士</a></li>
-            <li><a href="#" target="_blank">地下城与勇士</a></li>
-            <li><a href="#" target="_blank">地下城与勇士</a></li>
-            <li><a href="#" target="_blank">地下城与勇士</a></li>
-            <li><a href="#" target="_blank">地下城与勇士</a></li>
-            <li><a href="#" target="_blank">地下城与勇士</a></li>
-            <li><a href="#" target="_blank">地下城与勇士</a></li>
-            <li><a href="#" target="_blank">地下城与勇士</a></li>
-            <li><a href="#" target="_blank">地下城与勇士</a></li>
-            <li><a href="#" target="_blank">地下城与勇士</a></li>
-            <li><a href="#" target="_blank">地下城与勇士</a></li>
-            <li><a href="#" target="_blank">地下城与勇士</a></li>
-            <li><a href="#" target="_blank">地下城与勇士</a></li>
+            {loop $data $r}
+            <li><a href="{$r[url]}" target="_blank" title="{$r[introduce]}">{$r[name]}</a></li>
+            {/loop}
         </ul>
+        {/pc}
     </div>
 </div><!-- end the pn-friends -->
 </div><!--end the content-->

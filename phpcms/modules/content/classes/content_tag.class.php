@@ -76,6 +76,11 @@ class content_tag {
 		$order = $data['order'];
 
 		$return = $this->db->select($sql, '*', $data['limit'], $order, '', 'id');
+
+        if($this->modelid == 3 && !empty($return)){
+            //如果是图片模型，则如果对应文章的thumb为空，尝试从其图片集中取出第一张作为thumb
+            $data['moreinfo'] = 1;
+        }
 						
 		//调用副表的数据
 		if (isset($data['moreinfo']) && intval($data['moreinfo']) == 1) {
@@ -98,6 +103,20 @@ class content_tag {
 				}
 			}
 		}
+
+        if($this->modelid == 3 && !empty($return)){
+            //如果是图片模型，则如果对应文章的thumb为空，尝试从其图片集中取出第一张作为thumb
+            foreach($return as &$r){
+                if(!empty($r['pictureurls'])){
+                    $pics = NULL;
+                    eval('$pics = '.$r['pictureurls'].';');
+                    if(is_array($pics) && !empty($pics)){
+                        $r['thumb'] = $pics[0]['url'];
+                    }
+                }
+            }
+        }
+
 		return $return;
 	}
 	

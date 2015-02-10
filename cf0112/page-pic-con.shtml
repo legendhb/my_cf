@@ -34,9 +34,97 @@
 图中对话的本意，</p>
 							</div>
 							<div class="pn-article-con">
-								<div class="box-avatar">
-									<img alt="" src="img/img-227-170.jpg" width="860" height="535" class="avatar">
-								</div>
+								
+
+							<div id="gallery" class="gb-gallery">
+							    <div data-role="data-list">
+							      <a href="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20141009/aVziLKbjdzAgECB.jpg" target="_blank">         
+							        <img src="http://ue.17173cdn.com/a/lib/pandora/gallery/1.0.0/s.gif"                                               
+							        alt="第1张图片"                                                                                               
+							        data-src="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20141009/aVziLKbjdzAgECB.jpg!a-5-1920x1080.jpg"      
+							        data-thumb="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20141009/aVziLKbjdzAgECB.jpg!a-5-160x120.jpg"       
+							        data-big="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20141009/aVziLKbjdzAgECB.jpg!a-5-1920x1080.jpg"       
+							        data-height="451"                                                                                             
+							        data-width="720" >                                                                                             
+							      </a>
+							      <a href="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20141009/ScDKjpbjdznCfnm.jpg" target="_blank">
+							        <img src="http://ue.17173cdn.com/a/lib/pandora/gallery/1.0.0/s.gif"
+							        alt="第2张图片"
+							        data-src="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20141009/ScDKjpbjdznCfnm.jpg!a-5-1920x1080.jpg"
+							        data-thumb="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20141009/ScDKjpbjdznCfnm.jpg!a-5-160x120.jpg"
+							        data-big="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20141009/ScDKjpbjdznCfnm.jpg!a-5-1920x1080.jpg"
+							        >
+							      </a>
+							      <a href="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20140901/gxEXnebjayfdmEn.jpg" target="_blank">
+							        <img src="http://ue.17173cdn.com/a/lib/pandora/gallery/1.0.0/s.gif"
+							        alt="第3张图片"
+							        data-src="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20140901/gxEXnebjayfdmEn.jpg!a-5-1920x1080.jpg"
+							        data-thumb="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20140901/gxEXnebjayfdmEn.jpg!a-5-160x120.jpg"
+							        data-big="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20140901/gxEXnebjayfdmEn.jpg!a-5-1920x1080.jpg">
+							      </a>
+							      <a href="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20141009/aVziLKbjdzAgECB.jpg" target="_blank">         
+							        <img src="http://ue.17173cdn.com/a/lib/pandora/gallery/1.0.0/s.gif"                                               
+							        alt="第4张图片"                                                                                               
+							        data-src="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20141009/aVziLKbjdzAgECB.jpg!a-5-1920x1080.jpg"      
+							        data-thumb="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20141009/aVziLKbjdzAgECB.jpg!a-5-160x120.jpg"       
+							        data-big="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20141009/aVziLKbjdzAgECB.jpg!a-5-1920x1080.jpg"       
+							        data-height="451"                                                                                             
+							        data-width="720" >                                                                                             
+							      </a>
+							      <a href="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20141009/ScDKjpbjdznCfnm.jpg" target="_blank">
+							        <img src="http://ue.17173cdn.com/a/lib/pandora/gallery/1.0.0/s.gif"
+							        alt="第5张图片"
+							        data-src="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20141009/ScDKjpbjdznCfnm.jpg!a-5-1920x1080.jpg"
+							        data-thumb="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20141009/ScDKjpbjdznCfnm.jpg!a-5-160x120.jpg"
+							        data-big="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20141009/ScDKjpbjdznCfnm.jpg!a-5-1920x1080.jpg"
+							        >
+							      </a>
+							      <a href="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20140901/gxEXnebjayfdmEn.jpg" target="_blank">
+							        <img src="http://ue.17173cdn.com/a/lib/pandora/gallery/1.0.0/s.gif"
+							        alt="第6张图片"
+							        data-src="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20140901/gxEXnebjayfdmEn.jpg!a-5-1920x1080.jpg"
+							        data-thumb="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20140901/gxEXnebjayfdmEn.jpg!a-5-160x120.jpg"
+							        data-big="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20140901/gxEXnebjayfdmEn.jpg!a-5-1920x1080.jpg">
+							      </a>
+							      <a href="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20141009/aVziLKbjdzAgECB.jpg" target="_blank">         
+							        <img src="http://ue.17173cdn.com/a/lib/pandora/gallery/1.0.0/s.gif"                                               
+							        alt="第7张图片"                                                                                               
+							        data-src="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20141009/aVziLKbjdzAgECB.jpg!a-5-1920x1080.jpg"      
+							        data-thumb="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20141009/aVziLKbjdzAgECB.jpg!a-5-160x120.jpg"       
+							        data-big="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20141009/aVziLKbjdzAgECB.jpg!a-5-1920x1080.jpg"       
+							        data-height="451"                                                                                             
+							        data-width="720" >                                                                                             
+							      </a>
+							      <a href="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20141009/ScDKjpbjdznCfnm.jpg" target="_blank">
+							        <img src="http://ue.17173cdn.com/a/lib/pandora/gallery/1.0.0/s.gif"
+							        alt="第8张图片"
+							        data-src="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20141009/ScDKjpbjdznCfnm.jpg!a-5-1920x1080.jpg"
+							        data-thumb="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20141009/ScDKjpbjdznCfnm.jpg!a-5-160x120.jpg"
+							        data-big="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20141009/ScDKjpbjdznCfnm.jpg!a-5-1920x1080.jpg"
+							        >
+							      </a>
+							      <a href="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20140901/gxEXnebjayfdmEn.jpg" target="_blank">
+							        <img src="http://ue.17173cdn.com/a/lib/pandora/gallery/1.0.0/s.gif"
+							        alt="第9张图片"
+							        data-src="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20140901/gxEXnebjayfdmEn.jpg!a-5-1920x1080.jpg"
+							        data-thumb="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20140901/gxEXnebjayfdmEn.jpg!a-5-160x120.jpg"
+							        data-big="http://i2.17173cdn.com/i7mz64/YWxqaGBf/tu17173com/20140901/gxEXnebjayfdmEn.jpg!a-5-1920x1080.jpg">
+							      </a>
+							    </div>
+							    <script type="text/javascript" src="http://ue.17173cdn.com/a/lib/pandora.js"></script>
+							    <script type="text/javascript">
+								 	pandora.use(['$', 'gallery'], function($, Gallery) {
+										new Gallery({
+											element: '#gallery',
+											thumbnails: true
+										});
+									});
+								</script>
+							</div>
+
+
+
+
 								<p>近期，《穿越火线》校园站正式在哈尔滨理工大学、石家庄铁道学院、兰州大学、郑州航空工业管理学院等全国多所大学拉开帷幕，激情四射的学子玩家有的在自习室托举CF2.0海报摆出千手观音造型、有的用饺子摆拍出“CF”字样造型、有的则穿上迷彩服装玩起来cosplay、有的则使用任务书在自习室墙上组合出“CF2.0”字样、有的则为校车穿上了“火线军装”等等各类创意层出不穷，表达出了学子玩家对《穿越火线》最新版本“CF2.0革新时代”的热爱。</p>
 								<p>近期，《穿越火线》校园站正式在哈尔滨理工大学、石家庄铁道学院、兰州大学、郑州航空工业管理学院等全国多所大学拉开帷幕，激情四射的学子玩家有的在自习室托举CF2.0海报摆出千手观音造型、有的用饺子摆拍出“CF”字样造型、有的则穿上迷彩服装玩起来cosplay、有的则使用任务书在自习室墙上组合出“CF2.0”字样、有的则为校车穿上了“火线军装”等等各类创意层出不穷，表达出了学子玩家对《穿越火线》最新版本“CF2.0革新时代”的热爱。</p>
 							</div>
