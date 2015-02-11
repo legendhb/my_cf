@@ -1,31 +1,7 @@
 {template "content","header"}
 <div class="content content-ex">
     <div class="subpage subpage-video-list">
-        <!-- Hot pictures -->
-        <div class="comm-pn2 comm-pn2-ex">
-            <div class="comm-pn2-hd">
-                <i class="ico-adorn"></i>
-                <h2 class="tit">热门图片</h2>
-                <span class="more"><a href="#" target="_blank">更多<i class="ico-plus"></i></a></span>
-            </div>
-            <div class="comm-pn2-bd">
-                {pc:content action="position" posid="21" order="listorder DESC" num="8"}
-                <ul class="gb-list2 comm-plist col4">
-                    {loop $data $r}
-                    <li class="gb-list2-item">
-                        <a href="{$r[url]}" class="gb-list2-con" target="_blank">
-                                            <span class="gb-list2-c1">
-                                                <img alt="{$r[title]}" src="{$r[thumb]}" width="227" height="170" class="avatar" />
-                                            </span>
-                            <span class="gb-list2-c2"><span class="txt">{$r[title]}</span></span>
-                        </a>
-                    </li>
-                    {/loop}
-                </ul>
-                {/pc}
-            </div>
-        </div><!-- ~end Hot pictures -->
-
+        {template "content","inc-hotpics"}
         <!-- loop of categories -->
         {pc:content action="category" catid="$catid" num="10" siteid="$siteid" order="listorder ASC" return="cats_arr"}
             {loop $cats_arr $cr}
@@ -41,7 +17,7 @@
                 <ul class="gb-list2 comm-plist col4">
                     {loop $records $r}
                     <li class="gb-list2-item">
-                        <a href="{$r[url]}" class="gb-list2-con" target="_blank">
+                        <a href="{$r[url]}" class="gb-list2-con">
                                             <span class="gb-list2-c1">
                                                 <img alt="{$r[title]}" src="{$r[thumb]}" width="227" height="170" class="avatar" />
                                             </span>

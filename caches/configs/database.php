@@ -2,10 +2,10 @@
 
 return array (
 	'default' => array (
-		'hostname' => '127.0.0.1',
-		'database' => '5hiwan',
-		'username' => 'root',
-		'password' => 'dba',
+		'hostname' => 'legendhb.mysql.rds.aliyuncs.com',
+		'database' => 'db5hiwan',
+		'username' => 'user_5hiwan',
+		'password' => 'abcd1234',
 		'tablepre' => 'hw_',
 		'charset' => 'utf8',
 		'type' => 'mysql',
