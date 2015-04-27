@@ -90,10 +90,17 @@ class index {
 				showmessage(L('no_priv'));
 			}
 		}
-		if(module_exists('comment')) {
-			$allow_comment = isset($allow_comment) ? $allow_comment : 1;
-		} else {
-			$allow_comment = 0;
+//		if(module_exists('comment')) {
+//
+//		} else {
+//			$allow_comment = 0;
+//		}
+
+		//不安装评论模块，直接使用畅言
+		$allow_comment = isset($allow_comment) ? $allow_comment : 0;        //默认关闭评论
+		if($allow_comment){
+			//生成评论id
+			$comment_id = "content_{$siteid}_{$catid}_{$id}";
 		}
 		//阅读收费 类型
 		$paytype = $rs['paytype'];
@@ -191,7 +198,7 @@ class index {
 		//上一页
 		$previous_page = $this->db->get_one("`catid` = '$catid' AND `id`<'$id' AND `status`=99",'*','id DESC');
 		//下一页
-		$next_page = $this->db->get_one("`catid`= '$catid' AND `id`>'$id' AND `status`=99",'*','id ASC');
+		$next_page = $this->db->get_one("`catid`= '$catid' AND `id`>'$id' AND `status`=99");
 
 		if(empty($previous_page)) {
 			$previous_page = array('title'=>L('first_page'), 'thumb'=>IMG_PATH.'nopic_small.gif', 'url'=>'javascript:alert(\''.L('first_page').'\');');
@@ -278,6 +285,34 @@ class index {
 			include template('content',$template);
 		}
 	}
+
+    /**
+     * 推荐位数据列表页
+     */
+    public function recommend(){
+        $posid = $_GET['posid'] = intval($_GET['posid']);
+
+        if(!$posid) showmessage(L('recommend_not_exists'),'blank');
+
+        $model = pc_base::load_model('position_model');
+        $posInfo = $model->select("posid={$posid}", '*');
+        if(!empty($posInfo) && !empty($posInfo[0])){
+            $posInfo = $posInfo[0];
+        }
+
+        if(!$posInfo){
+            showmessage(L('recommend_position_not_exists'),'blank');
+        }
+
+        $siteid = $GLOBALS['siteid'] = 1;
+
+        $SEO = seo($siteid, '', '内容列表', '' ,'');
+
+        $page = intval($_GET['page']);
+
+        $template = 'list_recommend';
+        include template('content',$template);
+    }
 	
 	//JSON 输出
 	public function json_list() {

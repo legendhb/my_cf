@@ -683,6 +683,51 @@ function pages($num, $curr_page, $perpage = 20, $urlrule = '', $array = array(),
 			}
 			$more = 1;
 		}
+		if($curr_page>1) {
+			$multipage .= ' <a href="'.pageurl($urlrule, $curr_page-1, $array).'" class="backward"><i></i>'.L('previous').'</a>';
+		}else{
+			$multipage .= ' <a href="javascript:;" class="backward"><i></i>'.L('previous').'</a>';
+		}
+		if($curr_page<$pages) {
+			$multipage .= '<a href="'.pageurl($urlrule, $curr_page+1, $array).'" class="forward"><i></i>'.L('next').'</a>';
+		} elseif($curr_page==$pages) {
+			$multipage .= '<a href="javascript:;" class="forward"><i></i>'.L('next').'</a>';
+		} else {
+			$multipage .= '<a href="javascript:;" class="forward"><i></i>'.L('next').'</a>';
+		}
+	}
+	return $multipage;
+}
+
+function pages_ori($num, $curr_page, $perpage = 20, $urlrule = '', $array = array(),$setpages = 10) {
+	if(defined('URLRULE') && $urlrule == '') {
+		$urlrule = URLRULE;
+		$array = $GLOBALS['URL_ARRAY'];
+	} elseif($urlrule == '') {
+		$urlrule = url_par('page={$page}');
+	}
+	$multipage = '';
+	if($num > $perpage) {
+		$page = $setpages+1;
+		$offset = ceil($setpages/2-1);
+		$pages = ceil($num / $perpage);
+		if (defined('IN_ADMIN') && !defined('PAGES')) define('PAGES', $pages);
+		$from = $curr_page - $offset;
+		$to = $curr_page + $offset;
+		$more = 0;
+		if($page >= $pages) {
+			$from = 2;
+			$to = $pages-1;
+		} else {
+			if($from <= 1) {
+				$to = $page-1;
+				$from = 2;
+			}  elseif($to >= $pages) {
+				$from = $pages-($page-2);
+				$to = $pages-1;
+			}
+			$more = 1;
+		}
 		$multipage .= '<a class="a1">'.$num.L('page_item').'</a>';
 		if($curr_page>0) {
 			$multipage .= ' <a href="'.pageurl($urlrule, $curr_page-1, $array).'" class="a1">'.L('previous').'</a>';
@@ -1731,5 +1776,70 @@ function get_vid($contentid = 0, $catid = 0, $isspecial = 0) {
 		return $minite.":".$secend;
 	}
 
- } 
+ }
+
+/**
+ * 根据模版路径生成静态资源路径
+ * @param $cfgDir
+ * @param string $tpl
+ * @return string
+ */
+function tplAssetsDir($cfgDir, $tpl='default'){
+    if($tpl == 'default')
+        $tpl = '';
+    else
+        $tpl .='/';
+    $prefix = dirname($cfgDir) . '/';
+    $suffix = str_replace($prefix, '', $cfgDir);
+    return "{$prefix}{$tpl}{$suffix}";
+}
+
+/**
+ * 计算字符串长度，1个中文字符算2位，1个英文字符算1位
+ * @param $value
+ */
+function myStrlen($value){
+    //strlen中1个中文算3位，1个英文算1位，mb_strlen在utf-8编码下中文和英文都算1位
+    //故假设n个中文m个英文，strlen出来3n+m，mb_strlen在utf-8出来n+m
+    //于是((3n+m)+(n+m))/2 = (4n+2m)/2=2n+m
+    //该算法可能在某些特殊字符集结果下出现不准确的情况
+    return ceil((strlen($value)+mb_strlen($value, 'utf-8'))/2);
+}
+
+/**
+ * 截取字符（按照一个中文占两个字符，一个英文占一个字符计算，截取最大长度）
+ * @param string $value
+ * @param integer $maxLength
+ */
+function truncateStr($value, $maxLength=10){
+    $tmp = $return = '';
+    $return_length = 0;
+    $length = mb_strlen($value);
+    do{
+        $tmp .= mb_substr($value, 0, 1, 'utf-8');
+        if(myStrlen($tmp) > $maxLength){
+            break;
+        }
+        $return = $tmp;
+        $value = mb_substr($value, 1, $length, 'utf-8');
+    }while (mb_strlen($value, 'utf-8') >= 1);
+    return $return;
+}
+
+/**
+ * 根据catid获取分类信息
+ * @param $catid
+ * @param null $field
+ * @param int $siteid
+ * @return null
+ */
+function getCategoryInfoByCatId($catid, $field=NULL, $siteid=1){
+    $CATEGORYS = getcache('category_content_'.$siteid,'commons');
+    if(!isset($CATEGORYS[$catid])) return NULL;
+    $CAT = $CATEGORYS[$catid];
+    if($field){
+        return array_key_exists($field, $CAT) ? $CAT[$field] : NULL;
+    }
+    return $CAT;
+}
 ?>
