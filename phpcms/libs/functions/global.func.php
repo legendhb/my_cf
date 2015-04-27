@@ -333,66 +333,51 @@ function sizecount($filesize) {
 * @return	string
 */
 function sys_auth($string, $operation = 'ENCODE', $key = '', $expiry = 0) {
-	$key_length = 4;
+	$ckey_length = 4;
 	$key = md5($key != '' ? $key : pc_base::load_config('system', 'auth_key'));
-	$fixedkey = md5($key);
-	$egiskeys = md5(substr($fixedkey, 16, 16));
-	$runtokey = $key_length ? ($operation == 'ENCODE' ? substr(md5(microtime(true)), -$key_length) : substr($string, 0, $key_length)) : '';
-	$keys = md5(substr($runtokey, 0, 16) . substr($fixedkey, 0, 16) . substr($runtokey, 16) . substr($fixedkey, 16));
-	$string = $operation == 'ENCODE' ? sprintf('%010d', $expiry ? $expiry + time() : 0).substr(md5($string.$egiskeys), 0, 16) . $string : base64_decode(strtr(substr($string, $key_length), '-_', '+/'));
+	$keya = md5(substr($key, 0, 16));
+	$keyb = md5(substr($key, 16, 16));
+	$keyc = $ckey_length ? ($operation == 'DECODE' ? substr($string, 0, $ckey_length): substr(md5(microtime()), -$ckey_length)) : '';
 
-	if($operation=='ENCODE'){
-		$string .= substr(md5(microtime(true)), -4);
+	$cryptkey = $keya.md5($keya.$keyc);
+	$key_length = strlen($cryptkey);
+
+	$string = $operation == 'DECODE' ? base64_decode(strtr(substr($string, $ckey_length), '-_', '+/')) : sprintf('%010d', $expiry ? $expiry + time() : 0).substr(md5($string.$keyb), 0, 16).$string;
+	$string_length = strlen($string);
+
+	$result = '';
+	$box = range(0, 255);
+
+	$rndkey = array();
+	for($i = 0; $i <= 255; $i++) {
+		$rndkey[$i] = ord($cryptkey[$i % $key_length]);
 	}
-	if(function_exists('mcrypt_encrypt')==true){
-		$result=sys_auth_ex($string, $operation, $fixedkey);
-	}else{
-		$i = 0; $result = '';
-		$string_length = strlen($string);
-		for ($i = 0; $i < $string_length; $i++){
-			$result .= chr(ord($string{$i}) ^ ord($keys{$i % 32}));
-		}
+
+	for($j = $i = 0; $i < 256; $i++) {
+		$j = ($j + $box[$i] + $rndkey[$i]) % 256;
+		$tmp = $box[$i];
+		$box[$i] = $box[$j];
+		$box[$j] = $tmp;
 	}
-	if($operation=='DECODE'){
-		$result = substr($result, 0,-4);
+
+	for($a = $j = $i = 0; $i < $string_length; $i++) {
+		$a = ($a + 1) % 256;
+		$j = ($j + $box[$a]) % 256;
+		$tmp = $box[$a];
+		$box[$a] = $box[$j];
+		$box[$j] = $tmp;
+		$result .= chr(ord($string[$i]) ^ ($box[($box[$a] + $box[$j]) % 256]));
 	}
-	
-	if($operation == 'ENCODE') {
-		return $runtokey . rtrim(strtr(base64_encode($result), '+/', '-_'), '=');
-	} else {
-		if((substr($result, 0, 10) == 0 || substr($result, 0, 10) - time() > 0) && substr($result, 10, 16) == substr(md5(substr($result, 26).$egiskeys), 0, 16)) {
+
+	if($operation == 'DECODE') {
+		if((substr($result, 0, 10) == 0 || substr($result, 0, 10) - time() > 0) && substr($result, 10, 16) == substr(md5(substr($result, 26).$keyb), 0, 16)) {
 			return substr($result, 26);
 		} else {
 			return '';
 		}
+	} else {
+		return $keyc.rtrim(strtr(base64_encode($result), '+/', '-_'), '=');
 	}
-}
-/**
-* 字符串加密、解密扩展函数
-*
-*
-* @param	string	$txt		字符串
-* @param	string	$operation	ENCODE为加密，DECODE为解密，可选参数，默认为ENCODE，
-* @param	string	$key		密钥：数字、字母、下划线
-* @return	string
-*/
-function sys_auth_ex($string,$operation = 'ENCODE',$key) 
-{ 
-	$encrypted_data="";
-	$td = mcrypt_module_open('rijndael-256', '', 'ecb', '');
-	$iv = mcrypt_create_iv(mcrypt_enc_get_iv_size($td), MCRYPT_RAND);
-	$key = substr($key, 0, mcrypt_enc_get_key_size($td));
-	mcrypt_generic_init($td, $key, $iv);
-	if($operation=='ENCODE'){
-		$encrypted_data = mcrypt_generic($td, $string);
-	}else{
-		if(!empty($string)){
-			$encrypted_data = rtrim(mdecrypt_generic($td, $string));
-		}
-	}
-	mcrypt_generic_deinit($td);
-	mcrypt_module_close($td);
-	return $encrypted_data;
 }
 /**
 * 语言文件处理
@@ -670,51 +655,6 @@ function to_sqls($data, $front = ' AND ', $in_column = false) {
  * @return 分页
  */
 function pages($num, $curr_page, $perpage = 20, $urlrule = '', $array = array(),$setpages = 10) {
-	if(defined('URLRULE') && $urlrule == '') {
-		$urlrule = URLRULE;
-		$array = $GLOBALS['URL_ARRAY'];
-	} elseif($urlrule == '') {
-		$urlrule = url_par('page={$page}');
-	}
-	$multipage = '';
-	if($num > $perpage) {
-		$page = $setpages+1;
-		$offset = ceil($setpages/2-1);
-		$pages = ceil($num / $perpage);
-		if (defined('IN_ADMIN') && !defined('PAGES')) define('PAGES', $pages);
-		$from = $curr_page - $offset;
-		$to = $curr_page + $offset;
-		$more = 0;
-		if($page >= $pages) {
-			$from = 2;
-			$to = $pages-1;
-		} else {
-			if($from <= 1) {
-				$to = $page-1;
-				$from = 2;
-			}  elseif($to >= $pages) {
-				$from = $pages-($page-2);
-				$to = $pages-1;
-			}
-			$more = 1;
-		}
-		if($curr_page>1) {
-			$multipage .= ' <a href="'.pageurl($urlrule, $curr_page-1, $array).'" class="backward"><i></i>'.L('previous').'</a>';
-		}else{
-			$multipage .= ' <a href="javascript:;" class="backward"><i></i>'.L('previous').'</a>';
-		}
-		if($curr_page<$pages) {
-			$multipage .= '<a href="'.pageurl($urlrule, $curr_page+1, $array).'" class="forward"><i></i>'.L('next').'</a>';
-		} elseif($curr_page==$pages) {
-			$multipage .= '<a href="javascript:;" class="forward"><i></i>'.L('next').'</a>';
-		} else {
-			$multipage .= '<a href="javascript:;" class="forward"><i></i>'.L('next').'</a>';
-		}
-	}
-	return $multipage;
-}
-
-function pages_ori($num, $curr_page, $perpage = 20, $urlrule = '', $array = array(),$setpages = 10) {
 	if(defined('URLRULE') && $urlrule == '') {
 		$urlrule = URLRULE;
 		$array = $GLOBALS['URL_ARRAY'];
@@ -1466,12 +1406,8 @@ function go($catid,$id, $allurl = 0) {
 	$r = $db->get_one(array('id'=>$id), '`url`');
 	if (!empty($allurl)) {
 		if (strpos($r['url'], '://')===false) {
-			if (strpos($category[$catid]['url'], '://') === FALSE) {
-				$site = siteinfo($category[$catid]['siteid']);
-				$r['url'] = substr($site['domain'], 0, -1).$r['url'];
-			} else {
-				$r['url'] = $category[$catid]['url'].$r['url'];
-			}
+			$site = siteinfo($category[$catid]['siteid']);
+			$r['url'] = substr($site['domain'], 0, -1).$r['url'];
 		}
 	}
 
@@ -1599,7 +1535,22 @@ function upload_key($args) {
 	$authkey = md5($args.$pc_auth_key);
 	return $authkey;
 }
-
+/**
+ * 生成验证key
+ * @param $prefix   参数
+ * @param $suffix   参数
+ */
+function get_auth_key($prefix,$suffix="") {
+	if($prefix=='login'){
+		$pc_auth_key = md5(pc_base::load_config('system','auth_key').ip());
+	}else if($prefix=='email'){
+		$pc_auth_key = md5(pc_base::load_config('system','auth_key'));
+	}else{
+		$pc_auth_key = md5(pc_base::load_config('system','auth_key').$suffix);
+	}
+	$authkey = md5($prefix.$pc_auth_key);
+	return $authkey;
+}
 /**
  * 文本转换为图片
  * @param string $txt 图形化文本内容
@@ -1780,53 +1731,5 @@ function get_vid($contentid = 0, $catid = 0, $isspecial = 0) {
 		return $minite.":".$secend;
 	}
 
- }
-
-/**
- * 根据模版路径生成静态资源路径
- * @param $cfgDir
- * @param string $tpl
- * @return string
- */
-function tplAssetsDir($cfgDir, $tpl='default'){
-    if($tpl == 'default')
-        $tpl = '';
-    else
-        $tpl .='/';
-    $prefix = dirname($cfgDir) . '/';
-    $suffix = str_replace($prefix, '', $cfgDir);
-    return "{$prefix}{$tpl}{$suffix}";
-}
-
-/**
- * 计算字符串长度，1个中文字符算2位，1个英文字符算1位
- * @param $value
- */
-function myStrlen($value){
-    //strlen中1个中文算3位，1个英文算1位，mb_strlen在utf-8编码下中文和英文都算1位
-    //故假设n个中文m个英文，strlen出来3n+m，mb_strlen在utf-8出来n+m
-    //于是((3n+m)+(n+m))/2 = (4n+2m)/2=2n+m
-    //该算法可能在某些特殊字符集结果下出现不准确的情况
-    return ceil((strlen($value)+mb_strlen($value, 'utf-8'))/2);
-}
-
-/**
- * 截取字符（按照一个中文占两个字符，一个英文占一个字符计算，截取最大长度）
- * @param string $value
- * @param integer $maxLength
- */
-function truncateStr($value, $maxLength=10){
-    $tmp = $return = '';
-    $return_length = 0;
-    $length = mb_strlen($value);
-    do{
-        $tmp .= mb_substr($value, 0, 1, 'utf-8');
-        if(myStrlen($tmp) > $maxLength){
-            break;
-        }
-        $return = $tmp;
-        $value = mb_substr($value, 1, $length, 'utf-8');
-    }while (mb_strlen($value, 'utf-8') >= 1);
-    return $return;
-}
+ } 
 ?>

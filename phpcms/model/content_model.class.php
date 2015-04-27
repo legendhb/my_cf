@@ -82,15 +82,6 @@ class content_model extends model {
 			if(preg_match_all("/(src)=([\"|']?)([^ \"'>]+\.(gif|jpg|jpeg|bmp|png))\\2/i", $content, $matches)) {
 				$systeminfo['thumb'] = $matches[3][$auto_thumb_no];
 			}
-            if(empty($systeminfo['thumb'])){
-                //如果从文章正文中提取完后还是空的，则判断是否有图集，尝试从图集中取出第一张作为缩略图        -- add by LegendHB
-                if(!empty($modelinfo['pictureurls'])){
-                    $pics = string2array(stripslashes($modelinfo['pictureurls']));
-                    if(is_array($pics) && !empty($pics)){
-                        $systeminfo['thumb'] = $pics[0]['url'];
-                    }
-                }
-            }
 		}
 		$systeminfo['description'] = str_replace(array('/','\\','#','.',"'"),' ',$systeminfo['description']);
 		$systeminfo['keywords'] = str_replace(array('/','\\','#','.',"'"),' ',$systeminfo['keywords']);
@@ -288,16 +279,6 @@ class content_model extends model {
 			if(preg_match_all("/(src)=([\"|']?)([^ \"'>]+\.(gif|jpg|jpeg|bmp|png))\\2/i", $content, $matches)) {
 				$systeminfo['thumb'] = $matches[3][$auto_thumb_no];
 			}
-            if(empty($systeminfo['thumb'])){
-                //如果从文章正文中提取完后还是空的，则判断是否有图集，尝试从图集中取出第一张作为缩略图        -- add by LegendHB
-                if(!empty($modelinfo['pictureurls'])){
-                    $pics = string2array(stripslashes($modelinfo['pictureurls']));
-                    if(is_array($pics) && !empty($pics)){
-                        $systeminfo['thumb'] = $pics[0]['url'];
-                    }
-                }
-            }
-
 		}
 		if($data['islink']==1) {
 			$systeminfo['url'] = $_POST['linkurl'];
@@ -461,7 +442,7 @@ class content_model extends model {
 	public function set_catid($catid) {
 		$catid = intval($catid);
 		if(!$catid) return false;
-		if(empty($this->category)) {
+		if(empty($this->category) || empty($this->category[$catid])) {
 			$siteids = getcache('category_content','commons');
 			$siteid = $siteids[$catid];
 			$this->category = getcache('category_content_'.$siteid,'commons');

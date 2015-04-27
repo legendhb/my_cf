@@ -45,7 +45,7 @@ class index {
 		$siteids = getcache('category_content','commons');
 		$siteid = $siteids[$catid];
 		$CATEGORYS = getcache('category_content_'.$siteid,'commons');
-
+		
 		if(!isset($CATEGORYS[$catid]) || $CATEGORYS[$catid]['type']!=0) showmessage(L('information_does_not_exist'),'blank');
 		$this->category = $CAT = $CATEGORYS[$catid];
 		$this->category_setting = $CAT['setting'] = string2array($this->category['setting']);
@@ -65,13 +65,12 @@ class index {
 		//再次重新赋值，以数据库为准
 		$catid = $CATEGORYS[$r['catid']]['catid'];
 		$modelid = $CATEGORYS[$catid]['modelid'];
-
 		
 		require_once CACHE_MODEL_PATH.'content_output.class.php';
 		$content_output = new content_output($modelid,$catid,$CATEGORYS);
 		$data = $content_output->get($rs);
 		extract($data);
-
+		
 		//检查文章会员组权限
 		if($groupids_view && is_array($groupids_view)) {
 			$_groupid = param::get_cookie('_groupid');
@@ -91,17 +90,10 @@ class index {
 				showmessage(L('no_priv'));
 			}
 		}
-//		if(module_exists('comment')) {
-//
-//		} else {
-//			$allow_comment = 0;
-//		}
-
-		//不安装评论模块，直接使用畅言
-		$allow_comment = isset($allow_comment) ? $allow_comment : 0;        //默认关闭评论
-		if($allow_comment){
-			//生成评论id
-			$comment_id = "content_{$siteid}_{$catid}_{$id}";
+		if(module_exists('comment')) {
+			$allow_comment = isset($allow_comment) ? $allow_comment : 1;
+		} else {
+			$allow_comment = 0;
 		}
 		//阅读收费 类型
 		$paytype = $rs['paytype'];
@@ -125,7 +117,7 @@ class index {
 		//最顶级栏目ID
 		$arrparentid = explode(',', $CAT['arrparentid']);
 		$top_parentid = $arrparentid[1] ? $arrparentid[1] : $catid;
-
+		
 		$template = $template ? $template : $CAT['setting']['show_template'];
 		if(!$template) $template = 'show';
 		//SEO
@@ -199,7 +191,7 @@ class index {
 		//上一页
 		$previous_page = $this->db->get_one("`catid` = '$catid' AND `id`<'$id' AND `status`=99",'*','id DESC');
 		//下一页
-		$next_page = $this->db->get_one("`catid`= '$catid' AND `id`>'$id' AND `status`=99");
+		$next_page = $this->db->get_one("`catid`= '$catid' AND `id`>'$id' AND `status`=99",'*','id ASC');
 
 		if(empty($previous_page)) {
 			$previous_page = array('title'=>L('first_page'), 'thumb'=>IMG_PATH.'nopic_small.gif', 'url'=>'javascript:alert(\''.L('first_page').'\');');

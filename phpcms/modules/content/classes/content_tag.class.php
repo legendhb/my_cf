@@ -37,20 +37,46 @@ class content_tag {
 		if($data['action'] == 'lists') {
 			$catid = intval($data['catid']);
 			if(!$this->set_modelid($catid)) return false;
-			if(isset($data['where'])) {
-				$sql = $data['where'];
-			} else {
-				if($this->category[$catid]['child']) {
-					$catids_str = $this->category[$catid]['arrchildid'];
-					$pos = strpos($catids_str,',')+1;
-					$catids_str = substr($catids_str, $pos);
-					$sql = "status=99 AND catid IN ($catids_str)";
-				} else {
-					$sql = "status=99 AND catid='$catid'";
-				}
-			}
+            if($this->category[$catid]['child']) {
+                $catids_str = $this->category[$catid]['arrchildid'];
+                $pos = strpos($catids_str,',')+1;
+                $catids_str = substr($catids_str, $pos);
+                $sql = "status=99 AND catid IN ($catids_str)";
+            } else {
+                $sql = "status=99 AND catid='$catid'";
+            }
+
+            //如果有设置where字段，则附加上where，修改了原先覆盖where的问题
+            if(!empty($data['where'])) {
+                $sql .= " AND {$data['where']}";
+            }
+
 			return $this->db->count($sql);
-		}
+		}elseif($data['action'] == 'position'){
+            $posid = intval($data['posid']);
+            $thumb = (empty($data['thumb']) || intval($data['thumb']) == 0) ? 0 : 1;
+            $siteid = $GLOBALS['siteid'] ? intval($GLOBALS['siteid']) : 1;
+            $catid = (empty($data['catid']) || $data['catid'] == 0) ? '' : intval($data['catid']);
+            if($catid) {
+                $siteids = getcache('category_content','commons');
+                if(!$siteids[$catid]) return false;
+                $siteid = $siteids[$catid];
+                $this->category = getcache('category_content_'.$siteid,'commons');
+            }
+            if($catid && $this->category[$catid]['child']) {
+                $catids_str = $this->category[$catid]['arrchildid'];
+                $pos = strpos($catids_str,',')+1;
+                $catids_str = substr($catids_str, $pos);
+                $sql = "`catid` IN ($catids_str) AND ";
+            }  elseif($catid && !$this->category[$catid]['child']) {
+                $sql = "`catid` = '$catid' AND ";
+            }
+            if($thumb) $sql .= "`thumb` = '1' AND ";
+            if(isset($data['where'])) $sql .= $data['where'].' AND ';
+            if(isset($data['expiration']) && $data['expiration']==1) $sql .= '(`expiration` >= \''.SYS_TIME.'\' OR `expiration` = \'0\' ) AND ';
+            $sql .= "`posid` = '$posid' AND `siteid` = '".$siteid."'";
+            return $this->position->count($sql);
+        }
 	}
 	
 	/**

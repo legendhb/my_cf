@@ -5,42 +5,21 @@
     <div class="comm-pn2-hd">
         <i class="ico-adorn"></i>
         <h2 class="tit">热门视频</h2>
-        <span class="more"><a href="#" target="_blank">更多<i class="ico-plus"></i></a></span>
+        <span class="more"><a href="/recommend-19.html" target="_blank">更多<i class="ico-plus"></i></a></span>
     </div>
     <div class="comm-pn2-bd">
+        {pc:content action="position" posid="19" order="listorder DESC" num="4"}
         <ul class="gb-list2 comm-plist comm-plist-ex4 col2">
+            {loop $data $r}
             <li class="gb-list2-item">
-                <a href="#" class="gb-list2-con" target="_blank">
+                <a href="{$r[url]}" class="gb-list2-con" target="_blank">
 						<span class="gb-list2-c1">
-							<img alt="" src="{str_replace('images/', 'img/', tplAssetsDir(IMG_PATH, 'hw'))}img-130-85.jpg" width="130" height="85" class="avatar" />
+							<img alt="{$r[title]}" src="{$r[thumb]}" width="130" height="85" class="avatar" />
 						</span>
-                    <span class="gb-list2-c2"><span class="txt">公开赛暨CFS中国</span></span>
+                    <span class="gb-list2-c2"><span class="txt">{$r[title]}</span></span>
                 </a>
             </li>
-            <li class="gb-list2-item">
-                <a href="#" class="gb-list2-con" target="_blank">
-						<span class="gb-list2-c1">
-							<img alt="" src="{str_replace('images/', 'img/', tplAssetsDir(IMG_PATH, 'hw'))}img-130-85.jpg" width="130" height="85" class="avatar" />
-						</span>
-                    <span class="gb-list2-c2"><span class="txt">公开赛暨CFS中国</span></span>
-                </a>
-            </li>
-            <li class="gb-list2-item">
-                <a href="#" class="gb-list2-con" target="_blank">
-						<span class="gb-list2-c1">
-							<img alt="" src="{str_replace('images/', 'img/', tplAssetsDir(IMG_PATH, 'hw'))}img-130-85.jpg" width="130" height="85" class="avatar" />
-						</span>
-                    <span class="gb-list2-c2"><span class="txt">公开赛暨CFS中国</span></span>
-                </a>
-            </li>
-            <li class="gb-list2-item">
-                <a href="#" class="gb-list2-con" target="_blank">
-						<span class="gb-list2-c1">
-							<img alt="" src="{str_replace('images/', 'img/', tplAssetsDir(IMG_PATH, 'hw'))}img-130-85.jpg" width="130" height="85" class="avatar" />
-						</span>
-                    <span class="gb-list2-c2"><span class="txt">公开赛暨CFS中国</span></span>
-                </a>
-            </li>
+            {/loop}
         </ul>
     </div>
 </div>
@@ -48,7 +27,7 @@
     <div class="comm-pn2-hd">
         <i class="ico-adorn"></i>
         <h2 class="tit">热门资讯</h2>
-        <span class="more"><a href="#" target="_blank">更多<i class="ico-plus"></i></a></span>
+        <span class="more"><a href="/recommend-20.html" target="_blank">更多<i class="ico-plus"></i></a></span>
     </div>
     <div class="comm-pn2-bd">
         {pc:content action="position" posid="20" order="listorder DESC" num="3"}
@@ -69,7 +48,7 @@
     <div class="comm-pn2-hd">
         <i class="ico-adorn"></i>
         <h2 class="tit">火热美图</h2>
-        <span class="more"><a href="#" target="_blank">更多<i class="ico-plus"></i></a></span>
+        <span class="more"><a href="/recommend-21.html" target="_blank">更多<i class="ico-plus"></i></a></span>
     </div>
     <div class="comm-pn2-bd">
         {pc:content action="position" posid="21" order="listorder DESC" num="4"}

@@ -17,6 +17,7 @@
 	pc_base::load_app_class('client', 'member', 0);
 	$client = new client($ps_api_url, $ps_auth_key);
 	$code = $_REQUEST['code'];
+	
 	parse_str($client->sys_auth($code, 'DECODE'), $arr);
 	if(isset($arr['action'])) {
 		$action = $arr['action'];
@@ -155,8 +156,7 @@
 		$_cookietime = $cookietime ? intval($cookietime) : ($get_cookietime ? $get_cookietime : 0);
 		$cookietime = $_cookietime ? TIME + $_cookietime : 0;
 		
-		$phpcms_auth_key = md5(pc_base::load_config('system', 'auth_key').$_SERVER['HTTP_USER_AGENT']);
-		$phpcms_auth = sys_auth($userid."\t".$password, 'ENCODE', $phpcms_auth_key);
+		$phpcms_auth = sys_auth($userid."\t".$password, 'ENCODE', get_auth_key('login'));
 		header('P3P: CP="CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR"');	
 		param::set_cookie('auth', $phpcms_auth, $cookietime);
 		param::set_cookie('_userid', $userid, $cookietime);

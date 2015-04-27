@@ -3,9 +3,9 @@
     <div class="subpage subpage-video-list">
         {template "content","inc-hotpics"}
         <!-- loop of categories -->
-        {pc:content action="category" catid="$catid" num="10" siteid="$siteid" order="listorder ASC" return="cats_arr"}
+        {pc:content action="category" catid="$catid" num="4" siteid="$siteid" order="listorder DESC" return="cats_arr"}
             {loop $cats_arr $cr}
-                {pc:content action="lists" num="8" catid="$cr['catid']" order="listorder ASC,id DESC" return="records"}
+                {pc:content action="lists" num="8" catid="$cr['catid']" order="listorder DESC,id DESC" return="records"}
                     {if $records}
         <div class="comm-pn2 comm-pn2-ex">
             <div class="comm-pn2-hd">
